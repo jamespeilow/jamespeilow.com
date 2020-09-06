@@ -1,0 +1,75 @@
+/**
+ * Config: Animation
+ * -----------------------------------------------------------------------------
+ * Variables and mixins for consistent animation patterns.
+ *
+ */
+
+/**
+ * Timing.
+ */
+ $TIMING_MICRO: 0.1s;
+ $TIMING_SHORT: 0.2s;
+ $TIMING_FAST: 0.3s;
+ $TIMING_BASE: 0.4s;
+ $TIMING_MEDIUM: 0.5s;
+ $TIMING_LONG: 0.6s;
+ $TIMING_LONGER: 0.75s;
+ $TIMING_ANIMATION: 1s;
+ $TIMING_MESSAGE: 1.5s;
+ $TIMING_EXTRA: 2s;
+ $TIMING_LOADING: 3s;
+ 
+ /**
+  * Easing.
+  */
+ $EASING_LINEAR: cubic-bezier(0, 0, 1, 1);
+ $EASING_EASE: cubic-bezier(0.25, 0.1, 0.25, 1);
+ $EASING_EASE_HEADER: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+ $EASING_EASE_IN_OUT: cubic-bezier(0.42, 0, 0.58, 1);
+ $EASING_EASE_IN: cubic-bezier(0.42, 0, 1, 1);
+ $EASING_EASE_OUT: cubic-bezier(0, 0, 0.58, 1);
+ $EASING_EASE_OUT_QUAD: cubic-bezier(0.5, 1, 0.89, 1);
+ $EASING_EASE_OUT_LINE: cubic-bezier(0.075, 0.82, 0.165, 1);
+ 
+ /**
+  * Presets.
+  * - Predefined presets for general use.
+  */
+ @mixin animation-button-fade {
+   $settings: $TIMING_SHORT $EASING_LINEAR;
+   transition: background-color $settings, color $settings, transform $settings;
+ }
+ 
+ @mixin animation-text-link($property: color) {
+   transition: $property $TIMING_SHORT $EASING_EASE_OUT;
+ }
+ 
+ @mixin animation-overlay($property: opacity) {
+   transition: $property $TIMING_BASE $EASING_EASE_IN_OUT;
+ }
+ 
+ @mixin animation-modal-slide($property: transform) {
+   transition: $property $TIMING_BASE $EASING_EASE_IN_OUT;
+ }
+ 
+ @mixin animation-drawer-slide($property: transform) {
+   transition: $property $TIMING_LONG cubic-bezier(0.165, 0.84, 0.44, 1);
+ }
+ 
+ @mixin animation-icon-hover($property: fill) {
+   transition: $property $TIMING_SHORT $EASING_LINEAR;
+ }
+ 
+ @mixin animation-fade-out($property: opacity) {
+   transition: $property $TIMING_SHORT $TIMING_MICRO;
+ }
+ 
+ @mixin animation-fade-in($property: opacity, $timing: $TIMING_SHORT) {
+   transition: $property $timing $EASING_EASE_OUT;
+ }
+ 
+ @mixin animation-shrink($property: max-height) {
+   transition: $property $TIMING_SHORT $EASING_EASE_OUT;
+ }
+ 

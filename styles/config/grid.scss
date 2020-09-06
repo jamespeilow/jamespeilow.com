@@ -1,0 +1,51 @@
+/**
+ * Config: Grid
+ * -----------------------------------------------------------------------------
+ * Primary grid system based on materialize.css.
+ * - https://sass-mq.github.io/sass-mq
+ *
+ * Why we use use em values for media queries.
+ * https://zellwk.com/blog/media-query-units/
+ */
+
+// stylelint-disable
+@import '~sass-mq';
+
+$mq-breakpoints: (
+  tiny: 320px,
+  small: 576px,
+  medium: 768px,
+  large: 1024px,
+  wide: 1328px,
+  extrawide: 1680px,
+  ultrawide: 2200px
+);
+
+$CONTAINER_S: 520px;
+$CONTAINER_M: 1024px;
+$CONTAINER_L: 1440px;
+
+$NUM_COLS: 12 !default;
+$GUTTER_WIDTH: 1rem !default;
+$ELEMENT_TOP_MARGIN: 1rem !default;
+$ELEMENT_BOTTOM_MARGIN: 1rem !default;
+
+@mixin reset-offset {
+  left: auto;
+  margin-left: auto;
+  right: auto;
+}
+
+@mixin grid-classes($size, $i, $perc) {
+  &.offset-#{$size}#{$i} {
+    margin-left: $perc;
+  }
+
+  &.pull-#{$size}#{$i} {
+    right: $perc;
+  }
+
+  &.push-#{$size}#{$i} {
+    left: $perc;
+  }
+}

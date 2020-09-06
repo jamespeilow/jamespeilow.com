@@ -1,0 +1,16 @@
+
+/**
+ * Config: Layers
+ * -----------------------------------------------------------------------------
+ * Visual motif used to create groupings, content associations and focus through depth.
+ *
+ */
+ $LAYER_BASE: 0;
+ $LAYER_FLAT: 1;
+ $LAYER_RAISED: 2;
+ $LAYER_STICKY: 8;
+ $LAYER_OVERLAY: 12;
+ $LAYER_TEMPORARY: 16;
+ $LAYER_POP_OUT: 24;
+ $LAYER_LOADING: 100;
+ 

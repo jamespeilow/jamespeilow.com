@@ -1,0 +1,16 @@
+/**
+ * Base: Lazy load
+ * -----------------------------------------------------------------------------
+ * Using LazySizes by aFarkas to responsively load images into DOM.
+ *
+ */
+ .lazyload,
+ .lazyloading {
+   opacity: 0;
+ }
+ 
+ .lazyloaded {
+   opacity: 1;
+   transition: opacity $TIMING_MICRO;
+ }
+ 

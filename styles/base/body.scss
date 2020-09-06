@@ -1,0 +1,16 @@
+/**
+ * Base: Body
+ * -----------------------------------------------------------------------------
+ * General styling for the body element.
+ *
+ */
+ * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  &.is-locked {
+    overflow-y: hidden;
+  }
+}

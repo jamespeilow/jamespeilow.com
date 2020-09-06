@@ -1,0 +1,21 @@
+/**
+ * Base: Display
+ * -----------------------------------------------------------------------------
+ * Utility classes to hide and show elements based on conditions.
+ *
+ */
+ .visually-hidden {
+  @include visually-hidden;
+}
+
+[lazy] {
+  transition: opacity $TIMING_FAST ease;
+}
+
+[lazy=loading] {
+  opacity: 0;
+}
+
+[lazy=loaded] {
+  opacity: 1;
+}

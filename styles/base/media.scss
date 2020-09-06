@@ -1,0 +1,16 @@
+/**
+ * Base: Media
+ * -----------------------------------------------------------------------------
+ * Base styling and reset for HTML media elements.
+ *
+ */
+ figure {
+  margin: 0;
+}
+
+img,
+picture,
+video {
+  margin: 0;
+  max-width: 100%;
+}

@@ -1,0 +1,55 @@
+/**
+ * Config: Colors
+ * -----------------------------------------------------------------------------
+ * Universal variables that have common roles and usages throughout the theme.
+ *
+ */
+
+/**
+ * Brand.
+ */
+ $COLOR_BRAND_PRIMARY: rgba(30, 30, 28, 1);
+ $COLOR_BRAND_SECONDARY: rgba(0, 0, 0, 1);
+ 
+ /**
+  * Typography.
+  */
+ $COLOR_TEXT_INVERSE: rgba(255, 255, 255, 1);
+ $COLOR_TEXT_LIGHT: rgba(148, 148, 148, 1);
+ $COLOR_TEXT_PRIMARY: rgba(30, 30, 28, 1);
+ $COLOR_TEXT_SECONDARY: rgba(81, 81, 81, 1);
+ 
+ /**
+  * Background / Surfaces / Borders.
+  */
+ $COLOR_BACKGROUND_BEIGE: rgba(244, 240, 238, 1);
+ $COLOR_BACKGROUND_BLUE_TINT: rgba(235, 238, 245, 1);
+ $COLOR_BACKGROUND_DARK: rgba(30, 30, 28, 1);
+ $COLOR_BACKGROUND_LIGHT: rgba(247, 247, 247, 1);
+ $COLOR_BACKGROUND_SECONDARY: rgba(0, 0, 0, 1);
+ $COLOR_BACKGROUND_WHITE: rgba(255, 255, 255, 1);
+ $COLOR_BACKGROUND_YELLOW_TINT: rgba(255, 240, 229, 1);
+ 
+ $COLOR_BORDER_BEIGE: rgba(229, 226, 224, 1);
+ $COLOR_BORDER_DARK: rgba(173, 173, 173, 1);
+ $COLOR_BORDER_LIGHT: rgba(239, 239, 239, 1);
+ $COLOR_BORDER_BLUE: rgba(220, 223, 229, 1);
+ 
+ /**
+  * Links / Buttons.
+  */
+ $COLOR_BUTTON_ACTIVE: rgba(30, 30, 28, 1);
+ $COLOR_BUTTON_HOVER: rgba(64, 64, 60, 1);
+ 
+ $COLOR_LINK_ACTIVE: rgba(30, 30, 28, 1);
+ $COLOR_LINK_HOVER: rgba(64, 64, 60, 1);
+ 
+ /**
+  * Support.
+  */
+ $COLOR_SUPPORT_ERROR: rgba(246, 71, 71, 1);
+ $COLOR_SUPPORT_FOCUS: rgba(94, 158, 214, 1);
+ $COLOR_SUPPORT_NOTE: rgba(0, 0, 0, 1);
+ $COLOR_SUPPORT_SUCCESS: rgba(0, 170, 0, 1);
+ $COLOR_SUPPORT_WARNING: rgba(230, 87, 34, 1);
+ 

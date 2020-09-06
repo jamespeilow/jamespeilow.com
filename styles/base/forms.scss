@@ -1,0 +1,293 @@
+/**
+ * Base: Form
+ * -----------------------------------------------------------------------------
+ * Form resets, browser normalizing and base styling.
+ *
+ */
+/* stylelint-disable order/properties-alphabetical-order */
+/* stylelint-disable function-url-scheme-whitelist */
+form {
+  margin: 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+area,
+button,
+[role='button'],
+input,
+label,
+select,
+summary,
+textarea {
+  font-family: inherit;
+  touch-action: manipulation;
+}
+
+input,
+textarea,
+select {
+  font-size: inherit;
+
+  &[disabled] {
+    cursor: default;
+  }
+}
+
+button,
+input[type='submit'],
+label[for] {
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+/**
+ * Force option color (affects IE only).
+ */
+option {
+  background-color: $COLOR_BACKGROUND_WHITE;
+  color: $COLOR_TEXT_PRIMARY;
+}
+
+.input-error {
+  background-color: $COLOR_BACKGROUND_WHITE;
+  border-color: $COLOR_SUPPORT_ERROR;
+  color: $COLOR_TEXT_PRIMARY;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+textarea,
+select {
+  background-color: $COLOR_BACKGROUND_WHITE;
+  border: 1px solid $COLOR_BORDER_DARK;
+  color: $COLOR_TEXT_PRIMARY;
+  display: block;
+  font-size: $MS0;
+  height: 100%;
+  line-height: $LINE_HEIGHT_M;
+  min-height: 48px;
+  padding: $SPACING_S $SPACING_M 0.9rem;
+  width: 100%;
+
+  &::placeholder {
+    color: $COLOR_TEXT_LIGHT;
+  }
+
+  &[disabled] {
+    cursor: default;
+    opacity: 0.75;
+  }
+
+  @include mq($from: large) {
+    font-size: $MS-1;
+  }
+}
+
+label {
+  display: inline-block;
+  margin-bottom: $SPACING_XS;
+
+  + .caption {
+    display: block;
+    margin: $SPACING_2XS 0 $SPACING_2XS * 1.5;
+  }
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-clip: padding-box;
+  background-color: $COLOR_BACKGROUND_WHITE;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiBpY29uX19jaGV2cm9uLWRvd253YXJkIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTE2LjU5IDguNTlMMTIgMTMuMTcgNy40MSA4LjU5IDYgMTBsNiA2IDYtNi0xLjQxLTEuNDF6Ii8+PC9zdmc+');
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  border-radius: 0;
+  text-transform: none;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  margin-right: $SPACING_XS;
+}
+
+.checkbox {
+  $checkbox: &;
+  align-items: center;
+  display: flex;
+  position: relative;
+
+  &__input {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: $COLOR_BACKGROUND_WHITE;
+    border: 1px solid $COLOR_BORDER_DARK;
+    height: 20px;
+    width: 20px;
+
+    &:checked {
+      background-color: $COLOR_BACKGROUND_DARK;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTQgNy43OEwxLjIyIDVsLS45NDcuOTRMNCA5LjY2N2w4LTgtLjk0LS45NEw0IDcuNzh6IiBmaWxsPSIjZmZmIi8+PC9zdmc+');
+      background-position: center;
+      background-repeat: no-repeat;
+      border-color: $COLOR_BACKGROUND_DARK;
+    }
+
+    &:disabled {
+      background-color: $COLOR_BACKGROUND_LIGHT;
+      border-color: $COLOR_BORDER_LIGHT;
+      cursor: not-allowed;
+    }
+  }
+
+  &__label {
+    font-weight: $WEIGHT_BOOK;
+    margin-bottom: 5px;
+    padding-top: $SPACING_2XS;
+
+    &::after {
+      background: none;
+      border-bottom: 1.2px solid rgba($COLOR_BACKGROUND_WHITE, 1);
+      border-left: 1.2px solid rgba($COLOR_BACKGROUND_WHITE, 1);
+      box-sizing: border-box;
+      content: '';
+      height: 6px;
+      left: 0.34rem;
+      position: absolute;
+      top: 9px;
+      transform: scale(0) rotate(-45deg);
+      width: 10px;
+    }
+  }
+
+  &#{&}--alternate {
+    #{$checkbox}__input {
+      background-color: $COLOR_BACKGROUND_WHITE;
+      border: 6px solid $COLOR_BACKGROUND_WHITE;
+      height: 22px;
+      outline: 1px solid $COLOR_BORDER_LIGHT;
+      width: 22px;
+
+      &:checked {
+        background-color: $COLOR_BACKGROUND_DARK;
+        background-image: none;
+      }
+
+      &:focus {
+        outline: 1px solid $COLOR_BORDER_LIGHT;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.radio {
+  $checkbox: &;
+  align-items: center;
+  display: flex;
+  position: relative;
+
+  &__input {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: $COLOR_BACKGROUND_WHITE;
+    border: 1px solid $COLOR_BACKGROUND_DARK;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:checked {
+      border-color: $COLOR_BRAND_PRIMARY;
+
+      + #{$checkbox}__label {
+        &::after {
+          visibility: visible;
+        }
+      }
+    }
+
+    &:disabled {
+      background-color: $COLOR_BACKGROUND_LIGHT;
+      border-color: $COLOR_BORDER_LIGHT;
+      cursor: not-allowed;
+
+      + #{$checkbox}__label {
+        color: $COLOR_TEXT_LIGHT;
+
+        &::after {
+          opacity: 0.25;
+        }
+      }
+    }
+  }
+
+  &__label {
+    font-weight: $WEIGHT_BOOK;
+    margin-bottom: 5px;
+    padding-top: $SPACING_2XS;
+
+    &::after {
+      background-color: $COLOR_BRAND_PRIMARY;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 10px;
+      left: 0.34rem;
+      position: absolute;
+      top: 9px;
+      visibility: hidden;
+      width: 10px;
+    }
+  }
+}
+
+.form {
+  $form: &;
+
+  &__field {
+    &:not(:last-child) {
+      margin-bottom: $SPACING_M;
+    }
+
+    &#{&}--margin {
+      margin-bottom: $SPACING_M;
+    }
+  }
+
+  @include mq($from: medium) {
+    &__field {
+      &:not(:last-child) {
+        margin-bottom: $SPACING_XL;
+      }
+    }
+  }
+}

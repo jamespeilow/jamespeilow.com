@@ -1,0 +1,65 @@
+/**
+ * Config: Typography
+ * -----------------------------------------------------------------------------
+ * - Modular scale built by https://github.com/modularscale/modularscale-sass
+ *
+ */
+
+/**
+ * Font scale configuration.
+ */
+$modularscale: (
+  base: 16px,
+  ratio: 1.2,
+);
+
+$MS9: 5.16rem; // 82.57px
+$MS8: 4.3rem; // 68.79px
+$MS7: 3.583rem; // 57.331px
+$MS6: 2.986rem; // 47.78px
+$MS5: 2.488rem; // 39.81px
+$MS4: 2.074rem; // 33.18px
+$MS3: 1.728rem; // 27.65px
+$MS2: 1.44rem; // 23.04px
+$MS1: 1.2rem; // 19.2px
+$MS0: 1rem; // 16px
+$MS-1: 0.833rem; // 13.33px
+$MS-2: 0.694rem; // 11.11px
+$MS-3: 0.579rem; // 9.26px
+
+/**
+ * Font stack.
+ */
+$FONT_DISPLAY: 'Poppins', sans-serif;
+$FONT_HEADING: 'Poppins', sans-serif;
+$FONT_BODY: 'Space Mono', monospace;
+
+/**
+ * Weights.
+ */
+$WEIGHT_THIN: 100;
+$WEIGHT_EXTRA_LIGHT: 200;
+$WEIGHT_LIGHT: 300;
+$WEIGHT_BOOK: 400;
+$WEIGHT_MEDIUM: 500;
+$WEIGHT_SEMIBOLD: 600;
+$WEIGHT_BOLD: 700;
+$WEIGHT_HEAVY: 800;
+$WEIGHT_BLACK: 900;
+
+/**
+ * Typographic positioning and spacing.
+ */
+$BASELINE: 1rem;
+
+$LINE_HEIGHT_XS: 1;
+$LINE_HEIGHT_S: 1.3;
+$LINE_HEIGHT_M: 1.5;
+$LINE_HEIGHT_L: 1.6;
+$LINE_HEIGHT_XL: 1.75;
+
+$LETTER_SPACING_XS: 0;
+$LETTER_SPACING_S: 1px;
+$LETTER_SPACING_M: 1.5px;
+$LETTER_SPACING_L: 1.75px;
+$LETTER_SPACING_XL: 2px;

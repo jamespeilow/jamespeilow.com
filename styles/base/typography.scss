@@ -1,0 +1,313 @@
+/**
+ * Base: Typography
+ * -----------------------------------------------------------------------------
+ * Styles for displaying content with some of the most commonly used HTML elements,
+ * including normalization, typography, images, tables, and more.
+ *
+ */
+html,
+body {
+  font-family: $FONT_BODY;
+  font-size: $MS0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $WEIGHT_BOOK;
+  line-height: $LINE_HEIGHT_XL;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+.d1 {
+  font-family: $FONT_DISPLAY;
+  font-size: $MS7;
+  font-weight: $WEIGHT_BOOK;
+  letter-spacing: $LETTER_SPACING_XS;
+  line-height: $LINE_HEIGHT_S;
+  text-transform: none;
+
+  @include mq($from: large) {
+    font-size: $MS9;
+  }
+}
+
+.d2 {
+  font-family: $FONT_DISPLAY;
+  font-size: $MS6;
+  font-weight: $WEIGHT_BOOK;
+  letter-spacing: $LETTER_SPACING_XS;
+  line-height: $LINE_HEIGHT_XS;
+  text-transform: none;
+
+  @include mq($from: large) {
+    font-size: $MS8;
+  }
+}
+
+.d3 {
+  font-family: $FONT_DISPLAY;
+  font-size: $MS5;
+  font-weight: $WEIGHT_BOOK;
+  letter-spacing: $LETTER_SPACING_XS;
+  line-height: $LINE_HEIGHT_S;
+  text-transform: none;
+
+  @include mq($from: large) {
+    font-size: $MS7;
+  }
+}
+
+h1,
+.h1 {
+  font-family: $FONT_HEADING;
+  font-size: $MS4;
+  font-weight: $WEIGHT_BOLD;
+  letter-spacing: $LETTER_SPACING_XS;
+  line-height: $LINE_HEIGHT_S;
+  text-transform: none;
+
+  @include mq($from: large) {
+    font-size: $MS5;
+  }
+}
+
+h2,
+.h2 {
+  font-family: $FONT_HEADING;
+  font-size: $MS3;
+  font-weight: $WEIGHT_BOLD;
+  letter-spacing: $LETTER_SPACING_XS;
+  line-height: $LINE_HEIGHT_S;
+  text-transform: none;
+
+  @include mq($from: large) {
+    font-size: $MS4;
+  }
+}
+
+h3,
+.h3 {
+  font-family: $FONT_HEADING;
+  font-size: $MS2;
+  font-weight: $WEIGHT_BOLD;
+  letter-spacing: $LETTER_SPACING_XS;
+  line-height: $LINE_HEIGHT_S;
+  text-transform: none;
+
+  @include mq($from: large) {
+    font-size: $MS3;
+  }
+}
+
+h4,
+.h4 {
+  font-family: $FONT_HEADING;
+  font-size: $MS1;
+  font-weight: $WEIGHT_BOLD;
+  letter-spacing: $LETTER_SPACING_XS;
+  line-height: $LINE_HEIGHT_S;
+  text-transform: none;
+
+  @include mq($from: large) {
+    font-size: $MS2;
+  }
+}
+
+h5,
+.h5 {
+  font-family: $FONT_HEADING;
+  font-size: $MS1;
+  font-weight: $WEIGHT_BOOK;
+  letter-spacing: $LETTER_SPACING_XS;
+  line-height: $LINE_HEIGHT_S;
+  text-transform: none;
+
+  @include mq($from: large) {
+    font-size: $MS1;
+  }
+}
+
+h6,
+.h6 {
+  font-family: $FONT_HEADING;
+  font-size: $MS0;
+  font-weight: $WEIGHT_BOOK;
+  letter-spacing: $LETTER_SPACING_XS;
+  line-height: $LINE_HEIGHT_S;
+  text-transform: none;
+
+  @include mq($from: large) {
+    font-size: $MS1;
+  }
+}
+
+.subtitle-1 {
+  font-family: $FONT_DISPLAY;
+  font-size: $MS0;
+  font-weight: $WEIGHT_MEDIUM;
+  letter-spacing: $LETTER_SPACING_XS;
+  line-height: $LINE_HEIGHT_M;
+  text-transform: none;
+
+  @include mq($from: large) {
+    font-size: $MS1;
+    line-height: $LINE_HEIGHT_L;
+  }
+}
+
+.body-1 {
+  font-family: $FONT_BODY;
+  font-size: $MS0;
+  font-weight: $WEIGHT_BOOK;
+  letter-spacing: $LETTER_SPACING_XS;
+}
+
+p,
+.body-2 {
+  font-family: $FONT_BODY;
+  font-size: $MS0;
+  font-weight: $WEIGHT_BOOK;
+  letter-spacing: $LETTER_SPACING_XS;
+  margin: 0;
+
+  + p,
+  .body-2 {
+    margin-bottom: $SPACING_M;
+  }
+}
+
+.button-label {
+  @include button-reset;
+  font-family: $FONT_BODY;
+  font-size: $MS-1;
+  font-weight: $WEIGHT_SEMIBOLD;
+  letter-spacing: $LETTER_SPACING_M;
+  line-height: $LINE_HEIGHT_XS;
+  text-transform: uppercase;
+}
+
+.text-link {
+  font-family: $FONT_BODY;
+  font-size: $MS-2;
+  font-weight: $WEIGHT_BOOK;
+  letter-spacing: $LETTER_SPACING_S;
+  line-height: $LINE_HEIGHT_XS;
+  text-transform: uppercase;
+
+  @include mq($from: large) {
+    font-size: $MS-1;
+    letter-spacing: $LETTER_SPACING_M;
+  }
+}
+
+caption,
+.caption {
+  font-family: $FONT_DISPLAY;
+  font-size: $MS-1;
+  font-weight: $WEIGHT_BOOK;
+  line-height: $LINE_HEIGHT_XL;
+}
+
+label {
+  font-family: $FONT_DISPLAY;
+  font-size: $MS-2;
+  font-weight: $WEIGHT_BOOK;
+  letter-spacing: $LETTER_SPACING_M;
+  line-height: $LINE_HEIGHT_M;
+  text-transform: uppercase;
+}
+
+.label {
+  font-family: $FONT_BODY;
+  font-size: $MS-2;
+  font-weight: $WEIGHT_SEMIBOLD;
+  letter-spacing: $LETTER_SPACING_M;
+  line-height: $LINE_HEIGHT_M;
+  text-transform: uppercase;
+
+  @include mq($from: large) {
+    line-height: $LINE_HEIGHT_XL;
+  }
+}
+
+.inverse {
+  color: $COLOR_TEXT_INVERSE;
+}
+
+/**
+  * Block styles.
+  */
+blockquote {
+  color: $COLOR_TEXT_LIGHT;
+  font-size: $MS0;
+  line-height: $LINE_HEIGHT_M;
+  margin: 0 0 $SPACING_XL;
+  padding-bottom: $SPACING_XL;
+
+  @include mq($from: large) {
+    font-size: $MS1;
+  }
+}
+
+ol,
+.ol,
+ul,
+.ul {
+  font-size: $MS-1;
+  line-height: $LINE_HEIGHT_M;
+
+  @include mq($from: large) {
+    font-size: $MS0;
+  }
+}
+
+/**
+  * Rich text styles.
+  */
+.rte {
+  h1,
+  .h1 {
+    margin: 0 0 $SPACING_XL;
+  }
+
+  h2,
+  .h2 {
+    margin: 0 0 $SPACING_L;
+  }
+
+  h3,
+  .h3 {
+    margin: 0 0 $SPACING_M;
+  }
+
+  h4,
+  .h4 {
+    margin: 0 0 $SPACING_M;
+  }
+
+  h5,
+  .h5 {
+    margin: 0 0 $SPACING_M;
+  }
+
+  h6,
+  .h6 {
+    margin: 0 0 $SPACING_M;
+  }
+
+  p,
+  .body-1 {
+    margin: 0 0 $SPACING_L;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .body-2 {
+    margin: 0 0 $SPACING_L;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

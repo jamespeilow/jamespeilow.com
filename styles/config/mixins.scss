@@ -1,0 +1,173 @@
+/**
+ * Config: Mixins
+ * -----------------------------------------------------------------------------
+ * Global and reusable utility functions to reduce common styling.
+ *
+ */
+
+/**
+ * Outputs list of transition properties.
+ *
+ * Accepts:
+ * - $transitions: {String} List of transition properties to set
+ *
+ * Usage:
+ * .selector {
+ *   @include transition(width, height 0.5s ease-in);
+ * }
+ */
+ @mixin transition($transitions...) {
+  $output: ();
+
+  @each $transition in $transitions {
+    $output: append($output, get-transition-properties($transition), comma);
+  }
+  transition: $output;
+}
+
+/**
+ * Forces an element to self-clear its children.
+ *
+ * Usage:
+ * .selector {
+ *   @include clearfix;
+ * }
+ */
+@mixin clearfix() {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+  // stylelint-disable-next-line
+  *zoom: 1;
+}
+
+/**
+ * Hide element but make it accessible to screen readers.
+ *
+ * Usage:
+ * .selector {
+ *   @include visually-hidden;
+ * }
+ */
+@mixin visually-hidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/**
+ * Reverse the properties applied by @mixin visually-hidden.
+ *
+ * Accepts:
+ * - $position: {String} Positioning method for element
+ *
+ * Usage:
+ * .selector {
+ *   @include visually-shown(relative);
+ * }
+ */
+@mixin visually-shown($position: inherit) {
+  clip: auto;
+  clip-path: unset;
+  height: auto;
+  overflow: auto;
+  // stylelint-disable-next-line
+  position: $position !important;
+  width: auto;
+}
+
+/**
+ * Resets form buttons to appear as a standard text link.
+
+ * Usage:
+ * .form button {
+ *   @include button-reset;
+ * }
+ */
+@mixin button-reset() {
+  appearance: none;
+  background: none;
+  border: 0;
+  color: inherit;
+  padding: 0;
+}
+
+/**
+ * Resets list elements to appear as a stacked text links.
+
+ * Usage:
+ * ul  {
+ *   @include list-reset;
+ * }
+ */
+@mixin list-reset() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/**
+ * Default focus styling for browsers.
+ */
+@mixin focus-ring() {
+  outline: Highlight auto 5px;
+  // stylelint-disable-next-line
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+/**
+ * Base skeleton for text loading.
+ */
+@mixin text-skeleton() {
+  color: transparent;
+  position: relative;
+
+  &::after {
+    animation: skeleton-pulse linear 1.4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    background-color: rgba($COLOR_TEXT_LIGHT, 0.125);
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 75%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50%;
+  }
+}
+
+/**
+ * Opacity pulse keyframe.
+ */
+@keyframes skeleton-pulse {
+  0% {
+    opacity: 0.8;
+  }
+
+  25% {
+    opacity: 0.8;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

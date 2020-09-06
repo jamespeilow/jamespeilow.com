@@ -1,0 +1,17 @@
+/**
+ * App
+ * -----------------------------------------------------------------------------
+ * Entry file for all base styling of the application.
+ * - Imported in `default.vue` and other layouts.
+ * - All component and page based styling are in SFC
+ */
+@import '@/styles/base/reset';
+@import '@/styles/base/body';
+@import '@/styles/base/display';
+@import '@/styles/base/fonts';
+@import '@/styles/base/forms';
+@import '@/styles/base/grid';
+@import '@/styles/base/lazyload';
+@import '@/styles/base/media';
+@import '@/styles/base/transitions';
+@import '@/styles/base/typography';
