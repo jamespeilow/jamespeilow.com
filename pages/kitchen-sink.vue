@@ -1,6 +1,6 @@
 <template>
   <!-- HTML5 Kitchen sink by @dbox -->
-  <main>
+  <main class="container">
     <section>
       <hgroup>
         <h1>h1 HTML5 Kitchen Sink</h1>

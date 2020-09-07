@@ -8,11 +8,11 @@
 .container {
   margin: 0 auto;
   max-width: map-get($map: $mq-breakpoints, $key: wide);
-  padding: 0 ($GUTTER_WIDTH / 2);
+  padding: 0 $GUTTER_WIDTH;
   width: 100%;
 
   @include mq($from: large) {
-    padding: 0 $GUTTER_WIDTH;
+    padding: 0 $GUTTER_WIDTH * 2;
   }
 
   &#{&}--l {
