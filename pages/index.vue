@@ -21,15 +21,15 @@
 
         <base-button url="/kitchen-sink">Kitchen Sink</base-button>
       </div>
-      <base-card> <h3>Blog post card example</h3> </base-card>
-      <base-card accent="9">
+      <drop-card> <h3>Blog post card example</h3> </drop-card>
+      <drop-card accent="2">
         <div style="padding: 2rem">
           <h2>Contact</h2>
           <input placeholder="name" name="name" type="text" />
           <input placeholder="email" name="email" type="email" />
           <base-button>Submit</base-button>
         </div>
-      </base-card>
+      </drop-card>
     </div>
   </div>
 </template>
