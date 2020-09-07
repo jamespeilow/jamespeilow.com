@@ -64,13 +64,13 @@ select::-ms-expand {
  */
 option {
   background-color: $COLOR_BACKGROUND_WHITE;
-  color: $COLOR_TEXT_PRIMARY;
+  color: $COLOR_TEXT_DARK;
 }
 
 .input-error {
   background-color: $COLOR_BACKGROUND_WHITE;
   border-color: $COLOR_SUPPORT_ERROR;
-  color: $COLOR_TEXT_PRIMARY;
+  color: $COLOR_TEXT_WHITE;
 }
 
 input[type='text'],
@@ -78,11 +78,13 @@ input[type='email'],
 input[type='password'],
 input[type='search'],
 input[type='tel'],
+input[type='url'],
+input[type='number'],
 textarea,
 select {
   background-color: $COLOR_BACKGROUND_WHITE;
   border: 1px solid $COLOR_BORDER_DARK;
-  color: $COLOR_TEXT_PRIMARY;
+  color: $COLOR_TEXT_DARK;
   display: block;
   font-size: $MS0;
   height: 100%;
@@ -148,11 +150,11 @@ input[type='radio'] {
     width: 20px;
 
     &:checked {
-      background-color: $COLOR_BACKGROUND_DARK;
-      background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTQgNy43OEwxLjIyIDVsLS45NDcuOTRMNCA5LjY2N2w4LTgtLjk0LS45NEw0IDcuNzh6IiBmaWxsPSIjZmZmIi8+PC9zdmc+');
+      background-color: $THEME_ACCENT5;
+      background-image: url('data:image/svg+xml;utf8,<svg width="12" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M4 7.78L1.22 5l-.947.94L4 9.667l8-8-.94-.94L4 7.78z" fill="%23232931"/></svg>');
       background-position: center;
       background-repeat: no-repeat;
-      border-color: $COLOR_BACKGROUND_DARK;
+      border-color: $THEME_ACCENT5;
     }
 
     &:disabled {
@@ -226,7 +228,7 @@ input[type='radio'] {
     }
 
     &:checked {
-      border-color: $COLOR_BRAND_PRIMARY;
+      border-color: $THEME_ACCENT5;
 
       + #{$checkbox}__label {
         &::after {
@@ -256,16 +258,16 @@ input[type='radio'] {
     padding-top: $SPACING_2XS;
 
     &::after {
-      background-color: $COLOR_BRAND_PRIMARY;
+      background-color: $THEME_ACCENT5;
       border-radius: 50%;
       content: '';
       display: block;
-      height: 10px;
-      left: 0.34rem;
+      height: 12px;
+      left: 0.24rem;
       position: absolute;
-      top: 9px;
+      top: 6px;
       visibility: hidden;
-      width: 10px;
+      width: 12px;
     }
   }
 }

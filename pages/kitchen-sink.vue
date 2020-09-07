@@ -339,41 +339,44 @@ pre {
         </p>
         <fieldset>
           <legend>I am legend</legend>
-          <div>
-            <label>
-              <input
-                id="optionsR-radios1"
-                type="radio"
-                name="options-radios"
-                value="option1"
-                checked
-              />
+          <div class="radio">
+            <input
+              id="optionsR-radios1"
+              class="radio__input"
+              type="radio"
+              name="options-radios"
+              value="option1"
+              checked
+            />
+            <label for="optionsR-radios1" class="radio__label">
               Option one is this and that&mdash;be sure to include why it's
               great
             </label>
           </div>
 
-          <div>
-            <label>
-              <input
-                id="options-radios2"
-                type="radio"
-                name="options-radios"
-                value="option2"
-              />
+          <div class="radio">
+            <input
+              id="options-radios2"
+              class="radio__input"
+              type="radio"
+              name="options-radios"
+              value="option2"
+            />
+            <label class="radio__label">
               Option two can be something else and selecting it will deselect
               option one
             </label>
           </div>
-          <div>
-            <label>
-              <input
-                id="options-radios3"
-                type="radio"
-                name="optionsRadios"
-                value="option3"
-                disabled
-              />
+          <div class="radio">
+            <input
+              id="options-radios3"
+              class="radio__input"
+              type="radio"
+              name="optionsRadios"
+              value="option3"
+              disabled
+            />
+            <label for="options-radios3" class="radio__label">
               Option three is disabled
             </label>
           </div>
@@ -381,14 +384,37 @@ pre {
 
         <fieldset>
           <legend>I am also legend</legend>
-          <input type="checkbox" /> Check me out <input type="checkbox" /> Or
-          check me out
+          <div class="checkbox">
+            <input id="checkbox-0" type="checkbox" class="checkbox__input" />
+            <label class="checkbox__label" for="checkbox-0">Check me out</label>
+          </div>
+          <div class="checkbox">
+            <input id="checkbox-1" type="checkbox" class="checkbox__input" />
+            <label class="checkbox__label" for="checkbox-1"
+              >Or check me out</label
+            >
+          </div>
         </fieldset>
         <p>
-          <button type="button" name="button">Button</button>
-          <input type="button" name="input" value="Input Button" />
-          <input type="submit" name="submit" value="Submit Button" />
-          <input type="reset" name="reset" value="Reset Button" />
+          <button type="button" name="button" class="button">Button</button>
+          <input
+            type="button"
+            name="input"
+            class="button"
+            value="Input Button"
+          />
+          <input
+            type="submit"
+            name="submit"
+            class="button"
+            value="Submit Button"
+          />
+          <input
+            type="reset"
+            name="reset"
+            class="button"
+            value="Reset Button"
+          />
         </p>
       </form>
     </section>

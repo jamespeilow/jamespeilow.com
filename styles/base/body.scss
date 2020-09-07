@@ -4,12 +4,14 @@
  * General styling for the body element.
  *
  */
- * {
+* {
   margin: 0;
   padding: 0;
 }
 
 body {
+  background-color: $THEME_SHADE0;
+
   &.is-locked {
     overflow-y: hidden;
   }

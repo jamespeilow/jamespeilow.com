@@ -7,6 +7,7 @@
  */
 html,
 body {
+  color: $COLOR_TEXT_WHITE;
   font-family: $FONT_BODY;
   font-size: $MS0;
   -moz-osx-font-smoothing: grayscale;
@@ -230,7 +231,15 @@ label {
 }
 
 .inverse {
-  color: $COLOR_TEXT_INVERSE;
+  color: $COLOR_TEXT_DARK;
+}
+
+a {
+  color: $THEME_ACCENT3;
+
+  &:visited {
+    color: $THEME_ACCENT5;
+  }
 }
 
 /**
