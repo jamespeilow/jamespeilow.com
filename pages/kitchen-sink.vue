@@ -396,6 +396,13 @@ pre {
           </div>
         </fieldset>
         <p>
+          <base-button>Base Button</base-button>
+          <base-button :block="true">Block Button</base-button>
+          <base-button :disabled="true">Disabled Button</base-button>
+          <base-button url="/" type="secondary">Home</base-button>
+          <base-button url="/" type="secondary" :outlined="true">
+            Outline
+          </base-button>
           <button type="button" name="button" class="button">Button</button>
           <input
             type="button"
