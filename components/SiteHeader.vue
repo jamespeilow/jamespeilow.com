@@ -14,7 +14,7 @@
           >
             <base-link
               class="site-header__nav-link subtitle-1"
-              :url="item.to"
+              :url="item.url"
               :target="item.target"
             >
               {{ item.label }}
@@ -33,21 +33,21 @@ export default {
       navItems: [
         {
           label: 'work',
-          to: '/kitchen-sink',
+          url: '/kitchen-sink',
           accent: 'theme-accent0',
         },
         {
           label: 'blog',
-          to: '/blog',
+          url: '/blog',
           accent: 'theme-accent4',
         },
         {
           label: 'uses',
-          to: '/uses',
+          url: '/uses',
         },
         {
           label: 'Github',
-          to: 'https://github.com',
+          url: 'https://github.com',
           target: '_blank',
           accent: 'theme-accent7',
         },

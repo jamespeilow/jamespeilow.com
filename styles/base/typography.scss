@@ -242,6 +242,15 @@ a {
   }
 }
 
+.link-text {
+  color: $COLOR_TEXT_WHITE;
+  text-decoration: none;
+
+  &:visited {
+    color: $COLOR_TEXT_WHITE;
+  }
+}
+
 /**
   * Block styles.
   */
