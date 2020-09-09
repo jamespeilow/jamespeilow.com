@@ -1,0 +1,99 @@
+backend:
+  name: github
+  repo: jamespeilow/jamespeilow.com
+  branch: test-content
+
+media_folder: static/images
+public_folder: /images
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    format: 'json'
+    folder: 'content/blog'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - {
+          label: 'Description',
+          name: 'description',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Cover Image',
+          name: 'cover_image',
+          widget: 'image',
+          required: false,
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'portfolio'
+    label: 'Portfolio'
+    format: 'json'
+    folder: 'content/portfolio'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - {
+          label: 'Description',
+          name: 'description',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Cover Image',
+          name: 'cover_image',
+          widget: 'image',
+          required: false,
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Project URL',
+          name: 'project_url',
+          widget: 'string',
+          required: false,
+        }
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - label: 'Homepage'
+        name: 'homepage'
+        file: 'content/homepage.json'
+        fields:
+          - label: 'Hero'
+            name: 'hero'
+            widget: 'object'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - {
+                  label: 'Subtitle',
+                  name: 'subtitle',
+                  widget: 'string',
+                  required: false,
+                }
+          - label: 'About'
+            name: 'about'
+            widget: 'object'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Body', name: 'body', widget: 'markdown' }
+              - { label: 'Image', name: 'image', widget: 'image' }
+          - label: 'Contact'
+            name: 'contact'
+            widget: 'object'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - label: 'Social Links'
+                name: 'social'
+                widget: 'list'
+                fields:
+                  - { label: 'Title', name: 'title', widget: 'string' }
+                  - { label: 'URL', name: 'url', widget: 'string' }
