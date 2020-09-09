@@ -1,0 +1,8 @@
+{
+  "date": "2020-09-09T14:05:11.120Z",
+  "title": "Minimalist Quote Generator",
+  "description": " A responsive site with minimalist aesthetic styling that displays a random quote about minimalism.",
+  "body": "For this project I created a responsive site with minimalist aesthetic styling that displays a random quote about minimalism.\n\nQuotes are loaded from an array of quotes stored in a JSON file, fetched over AJAX.\n\nUsed the Twitter API to add a Tweet Quote button to the page.",
+  "project_url": "https://jamespeilow.github.io/random-quote-generator/",
+  "cover_image": "/images/jamespeilow.github.io_random-quote-generator_.png"
+}
