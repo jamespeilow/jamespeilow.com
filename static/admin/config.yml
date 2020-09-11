@@ -9,7 +9,7 @@ public_folder: /images
 collections:
   - name: 'blog'
     label: 'Blog'
-    format: 'json'
+    format: 'frontmatter'
     folder: 'content/blog'
     create: true
     slug: '{{slug}}'
@@ -33,7 +33,7 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'portfolio'
     label: 'Portfolio'
-    format: 'json'
+    format: 'frontmatter'
     folder: 'content/portfolio'
     create: true
     slug: '{{slug}}'

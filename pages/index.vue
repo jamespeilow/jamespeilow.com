@@ -1,30 +1,22 @@
 <template>
   <div class="container">
     <div class="main-content">
-      <Logo />
-      <h1 class="title">jamespeilow.com</h1>
-      <div class="links">
-        <base-button
-          url="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Documentation
-        </base-button>
-        <base-button
-          url="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Github
-        </base-button>
+      <h1 class="title">{{ page.hero.title }}</h1>
+      <span class="subtitle-1">{{ page.hero.subtitle }}</span>
 
-        <base-button url="/kitchen-sink">Kitchen Sink</base-button>
-      </div>
-      <drop-card> <h3>Blog post card example</h3> </drop-card>
+      <drop-card>
+        <h3>{{ page.about.title }}</h3>
+        <nuxt-content :document="page.about" />
+        <img :src="page.about.image" />
+      </drop-card>
       <drop-card accent="2">
         <div style="padding: 2rem">
           <h2>Contact</h2>
+          <div v-for="link in page.contact.social" :key="link.url">
+            <base-link :url="link.url" target="_blank">
+              {{ link.title }}
+            </base-link>
+          </div>
           <input placeholder="name" name="name" type="text" />
           <input placeholder="email" name="email" type="email" />
           <base-button>Submit</base-button>
@@ -35,7 +27,22 @@
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ $content, params, error }) {
+    // const slug = 'blog/setting-up-netlify-cms-with-nuxt-content'
+    const slug = 'homepage'
+    const page = await $content(slug)
+      .fetch()
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.log(err)
+        error({ statusCode: 404, message: 'Content not found' })
+      })
+    return {
+      page,
+    }
+  },
+}
 </script>
 <style lang="scss" scoped>
 .main-content {

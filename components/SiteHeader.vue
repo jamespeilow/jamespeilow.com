@@ -33,7 +33,7 @@ export default {
       navItems: [
         {
           label: 'work',
-          url: '/kitchen-sink',
+          url: '/work',
           accent: 'theme-accent0',
         },
         {
@@ -43,13 +43,7 @@ export default {
         },
         {
           label: 'uses',
-          url: '/uses',
-        },
-        {
-          label: 'Github',
-          url: 'https://github.com',
-          target: '_blank',
-          accent: 'theme-accent7',
+          url: '/kitchen-sink',
         },
       ],
     }

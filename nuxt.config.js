@@ -29,7 +29,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/styles/app', ],
+  css: ['@/styles/app'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -59,7 +59,32 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['@nuxt/content'],
+
+  content: {
+    liveEdit: false,
+  },
+
+  hooks: {
+    'content:file:beforeInsert': async (document, database) => {
+      if (document.extension === '.json' && document.body) {
+        const data = await database.markdown.toJSON(document.body)
+
+        Object.assign(document, data)
+      }
+
+      if (document.slug === 'homepage') {
+        const sections = Object.keys(document)
+        await sections.forEach(async (key) => {
+          if (document[key].body) {
+            const formatted = await database.markdown.toJSON(document[key].body)
+
+            Object.assign(document[key], formatted)
+          }
+        })
+      }
+    },
+  },
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
