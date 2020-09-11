@@ -1,27 +1,27 @@
 <template>
-  <div class="container">
-    <div class="main-content">
-      <h1 class="title">{{ page.hero.title }}</h1>
-      <span class="subtitle-1">{{ page.hero.subtitle }}</span>
-
-      <drop-card>
-        <h3>{{ page.about.title }}</h3>
-        <nuxt-content :document="page.about" />
-        <img :src="page.about.image" />
-      </drop-card>
-      <drop-card accent="2">
-        <div style="padding: 2rem">
-          <h2>Contact</h2>
-          <div v-for="link in page.contact.social" :key="link.url">
-            <base-link :url="link.url" target="_blank">
-              {{ link.title }}
-            </base-link>
+  <div class="homepage">
+    <section-hero :title="page.hero.title" :subtitle="page.hero.subtitle" />
+    <div class="container">
+      <div class="main-content">
+        <drop-card>
+          <h3>{{ page.about.title }}</h3>
+          <nuxt-content :document="page.about" />
+          <img :src="page.about.image" />
+        </drop-card>
+        <drop-card accent="2">
+          <div style="padding: 2rem">
+            <h2>Contact</h2>
+            <div v-for="link in page.contact.social" :key="link.url">
+              <base-link :url="link.url" target="_blank">
+                {{ link.title }}
+              </base-link>
+            </div>
+            <input placeholder="name" name="name" type="text" />
+            <input placeholder="email" name="email" type="email" />
+            <base-button>Submit</base-button>
           </div>
-          <input placeholder="name" name="name" type="text" />
-          <input placeholder="email" name="email" type="email" />
-          <base-button>Submit</base-button>
-        </div>
-      </drop-card>
+        </drop-card>
+      </div>
     </div>
   </div>
 </template>
