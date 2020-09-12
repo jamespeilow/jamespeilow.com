@@ -92,6 +92,7 @@
 </template>
 
 <script>
+import { debounce } from '@/scripts/utils/helpers'
 export default {
   mounted() {
     this.setCircleStyles()
@@ -100,15 +101,17 @@ export default {
 
   methods: {
     setResizeListener() {
-      window.addEventListener('resize', this.setCircleStyles)
+      window.addEventListener('resize', debounce(this.handleResize, 200))
     },
 
     getRandomFromRange(min, max) {
       const range = max - min
-      return Math.random() * range + min
+      return (Math.random() * range + min).toFixed(1)
     },
 
     setCircleStyles() {
+      if (!this.$refs.heroCircles) return
+
       const circles = Array.from(
         this.$refs.heroCircles.querySelectorAll('path')
       )
@@ -119,6 +122,10 @@ export default {
         circle.style.animationDelay = `${delay}s`
         circle.style.transformOrigin = `${xTransform}% ${yTransform}%`
       })
+    },
+
+    handleResize() {
+      this.setCircleStyles()
     },
   },
 }
