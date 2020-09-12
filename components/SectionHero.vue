@@ -1,12 +1,13 @@
 <template>
   <section class="section-hero">
-    <div class="section-hero__bg-text h1">{{ title }}</div>
+    <div class="section-hero__bg-text h1" aria-hidden="true">{{ title }}</div>
     <div class="container">
       <div class="section-hero__wrapper">
         <div class="section-hero__content">
           <h2 class="section-hero__title">{{ title }}</h2>
           <span class="section-hero__subtitle">{{ subtitle }}</span>
         </div>
+        <hero-circles />
       </div>
     </div>
   </section>
@@ -47,6 +48,7 @@ export default {
     height: 100%;
     top: 0;
     left: 0;
+    pointer-events: none;
   }
 
   &__wrapper {
