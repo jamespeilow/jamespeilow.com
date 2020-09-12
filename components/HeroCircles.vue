@@ -151,5 +151,11 @@ export default {
     display: block;
     max-height: initial;
   }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    > path {
+      animation: none;
+    }
+  }
 }
 </style>
