@@ -1,6 +1,8 @@
 <template>
   <div class="drop-card" :class="classes" :style="cardStyles">
-    <slot></slot>
+    <div class="drop-card__content">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -44,8 +46,6 @@ export default {
 .drop-card {
   --accent: var(--theme-accent5);
 
-  background-color: $COLOR_BACKGROUND_WHITE;
-  border-radius: $SPACING_XS;
   color: $COLOR_TEXT_DARK;
   position: relative;
 
@@ -59,6 +59,12 @@ export default {
     top: $SPACING_XS;
     width: 100%;
     z-index: -1;
+  }
+
+  &__content {
+    background-color: $COLOR_BACKGROUND_WHITE;
+    border-radius: $SPACING_XS;
+    overflow: hidden;
   }
 
   &#{&}--no-accent {

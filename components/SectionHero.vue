@@ -77,6 +77,7 @@ export default {
   }
 
   @include mq($from: medium) {
+    margin-bottom: $LAYOUT_M;
     min-height: 500px;
 
     &__bg-text {

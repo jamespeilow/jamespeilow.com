@@ -1,13 +1,9 @@
 <template>
   <div class="homepage">
     <section-hero :title="page.hero.title" :subtitle="page.hero.subtitle" />
+    <section-about :section-data="page.about" />
     <div class="container">
       <div class="main-content">
-        <drop-card>
-          <h3>{{ page.about.title }}</h3>
-          <nuxt-content :document="page.about" />
-          <img :src="page.about.image" />
-        </drop-card>
         <drop-card accent="2">
           <div style="padding: 2rem">
             <h2>Contact</h2>

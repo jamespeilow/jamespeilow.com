@@ -1,0 +1,21 @@
+.feature-bar {
+  --bar-accent: #{$THEME_ACCENT7};
+
+  align-items: baseline;
+  display: flex;
+
+  &::after {
+    background-color: var(--bar-accent);
+    border-radius: 2px;
+    display: inline-block;
+    content: '';
+    height: 4px;
+    width: 100%;
+  }
+
+  &#{&}--right {
+    &::after {
+      margin-left: $SPACING_M;
+    }
+  }
+}
