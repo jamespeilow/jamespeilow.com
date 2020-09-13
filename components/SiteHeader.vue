@@ -12,11 +12,7 @@
             :class="getItemAccent(item.accent)"
             :style="itemStyles(item)"
           >
-            <base-link
-              class="site-header__nav-link subtitle-1"
-              :url="item.url"
-              :target="item.target"
-            >
+            <base-link class="site-header__nav-link subtitle-1" :url="item.url">
               {{ item.label }}
             </base-link>
           </li>
