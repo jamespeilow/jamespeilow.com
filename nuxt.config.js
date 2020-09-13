@@ -50,6 +50,8 @@ export default {
     '@nuxtjs/stylelint-module',
     // Doc: https://github.com/nuxt-community/style-resources-module/
     '@nuxtjs/style-resources',
+    // Doc: https://github.com/nuxt-community/svg-module
+    '@nuxtjs/svg',
   ],
 
   styleResources: {
