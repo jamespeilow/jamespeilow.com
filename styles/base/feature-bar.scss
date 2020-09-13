@@ -3,19 +3,53 @@
 
   align-items: baseline;
   display: flex;
+  position: relative;
 
+  &::before,
   &::after {
     background-color: var(--bar-accent);
     border-radius: 2px;
-    display: inline-block;
     content: '';
+    display: inline-block;
+    flex: 1;
     height: 4px;
     width: 100%;
+  }
+
+  &::before {
+    content: unset;
   }
 
   &#{&}--right {
     &::after {
       margin-left: $SPACING_M;
+    }
+  }
+
+  &#{&}--right-full {
+    display: block;
+    text-align: center;
+
+    &::after {
+      margin-left: $SPACING_M;
+      position: absolute;
+      top: 0.85em;
+    }
+  }
+
+  &#{&}--left-full {
+    display: block;
+    text-align: center;
+
+    &::before {
+      content: '';
+      margin-left: calc(-1 * (100% + #{$SPACING_M}));
+      position: absolute;
+      top: 0.85em;
+    }
+
+    &::after {
+      content: unset;
     }
   }
 }

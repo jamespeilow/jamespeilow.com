@@ -2,23 +2,7 @@
   <div class="homepage">
     <section-hero :title="page.hero.title" :subtitle="page.hero.subtitle" />
     <section-about :section-data="page.about" />
-    <div class="container">
-      <div class="main-content">
-        <drop-card accent="2">
-          <div style="padding: 2rem">
-            <h2>Contact</h2>
-            <div v-for="link in page.contact.social" :key="link.url">
-              <base-link :url="link.url" target="_blank">
-                {{ link.title }}
-              </base-link>
-            </div>
-            <input placeholder="name" name="name" type="text" />
-            <input placeholder="email" name="email" type="email" />
-            <base-button>Submit</base-button>
-          </div>
-        </drop-card>
-      </div>
-    </div>
+    <section-contact :section-data="page.contact" />
   </div>
 </template>
 

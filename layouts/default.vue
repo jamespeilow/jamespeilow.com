@@ -5,3 +5,9 @@
     <site-footer />
   </div>
 </template>
+
+<style lang="scss">
+.template-default {
+  overflow-x: hidden;
+}
+</style>

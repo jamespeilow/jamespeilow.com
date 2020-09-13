@@ -9,15 +9,23 @@
     "image": "/images/jamespeilow-headshot.jpg"
   },
   "contact": {
-    "title": "Get In Touch",
+    "title": "get in touch",
     "social": [
       {
-        "title": "github",
+        "title": "Github",
         "url": "https://github.com/jamespeilow"
       },
       {
         "title": "Codepen",
         "url": "https://codepen.io/jamespeilow"
+      },
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/TheAstronautJay"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/james-peilow-14586538/"
       }
     ]
   }
