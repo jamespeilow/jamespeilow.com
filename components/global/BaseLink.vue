@@ -1,5 +1,5 @@
 <template>
-  <component :is="element" :to="to" :href="href">
+  <component :is="element" v-bind="linkOptions">
     <slot></slot>
   </component>
 </template>
@@ -11,6 +11,10 @@ export default {
       type: String,
       default: '',
       required: true,
+    },
+    newWindow: {
+      type: Boolean,
+      default: false,
     },
   },
 
@@ -30,6 +34,18 @@ export default {
       }
 
       return 'button'
+    },
+
+    /**
+     * Returns all properties for the link element to base in v-bind.
+     */
+    linkOptions() {
+      return {
+        href: this.href,
+        to: this.to,
+        target: this.newWindow ? '_blank' : false,
+        rel: this.newWindow ? 'noopener noreferrer' : false,
+      }
     },
 
     /**
