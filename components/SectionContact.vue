@@ -19,8 +19,19 @@
               :key="item.url"
               class="section-contact__social-item"
             >
-              <base-link class="section-contact__social-link" :url="item.url">
-                <img :src="item.title.toLowerCase()" :alt="item.title" />
+              <base-link
+                class="section-contact__social-link"
+                :url="item.url"
+                :new-window="true"
+              >
+                <div class="section-contact__social-icon">
+                  <div
+                    v-html="
+                      require(`~/assets/icons/${item.title.toLowerCase()}.svg?raw`)
+                    "
+                  />
+                  <span class="visually-hidden">{{ item.title }}</span>
+                </div>
               </base-link>
             </li>
           </ul>
@@ -65,11 +76,28 @@ export default {
   }
 
   &__social-link {
+    background-color: $THEME_ACCENT4;
+    border-radius: 50%;
     display: block;
     margin: 0 $SPACING_M;
+    height: 48px;
+    width: 48px;
+    padding: $SPACING_S;
+    transition: background-color $TIMING_FAST $EASING_EASE;
 
-    img {
-      border-radius: 50%;
+    .icon {
+      height: auto;
+      width: 100%;
+      transform: scale(1);
+      transition: transform $TIMING_FAST $EASING_EASE;
+    }
+
+    &:hover {
+      background-color: $THEME_ACCENT5;
+
+      .icon {
+        transform: scale(1.1);
+      }
     }
   }
 
