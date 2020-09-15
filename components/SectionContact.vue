@@ -50,17 +50,18 @@
                 class="underline-input"
                 type="text"
                 placeholder="Name"
+                name="name"
               />
             </div>
 
             <div class="form-field underline-input">
               <label for="email" class="visually-hidden">Email</label>
-              <input id="email" type="email" placeholder="Email" />
+              <input id="email" type="email" placeholder="Email" name="email" />
             </div>
 
             <div class="form-field form-field--full underline-input">
               <label for="message" class="visually-hidden">Message</label>
-              <textarea id="message" placeholder="Message" />
+              <textarea id="message" name="message" placeholder="Message" />
             </div>
 
             <div
