@@ -9,8 +9,11 @@
           <nuxt-content class="section-about__body" :document="sectionData" />
         </div>
         <div class="section-about__image-wrapper">
-          <drop-card accent="7">
-            <grid-circles :rotate="180" />
+          <drop-card
+            accent="7"
+            :grid-circles="true"
+            :grid-circles-rotation="180"
+          >
             <img
               class="section-about__image"
               :src="sectionData.image"

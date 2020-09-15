@@ -8,7 +8,7 @@
         {{ sectionData.title }}
       </h2>
 
-      <drop-card class="section-contact__card" accent="7">
+      <drop-card class="section-contact__card" accent="7" :grid-circles="true">
         <div class="section-contact__wrapper">
           <ul
             v-if="sectionData.social.length > 0"
@@ -91,7 +91,7 @@ export default {
 <style lang="scss">
 .section-contact {
   &__wrapper {
-    padding: $SPACING_3XL;
+    padding: $SPACING_3XL $SPACING_M;
   }
 
   &__title {
@@ -104,8 +104,9 @@ export default {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: $SPACING_4XL;
+    justify-content: center;
+    margin: 0 auto $SPACING_4XL;
+    width: 75%;
   }
 
   &__social-link {
@@ -149,6 +150,10 @@ export default {
   }
 
   @include mq($from: medium) {
+    &__wrapper {
+      padding: $SPACING_3XL;
+    }
+
     &__card {
       margin: auto;
       width: 66.66%;
