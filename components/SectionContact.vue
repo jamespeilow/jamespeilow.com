@@ -36,7 +36,39 @@
             </li>
           </ul>
 
-          <form class="section-contact__form">Form goes here..</form>
+          <form
+            class="section-contact__form"
+            name="homepage-contact"
+            method="post"
+            accept-charset="utf-8"
+            data-netlify="true"
+          >
+            <div class="form-field underline-input">
+              <label for="name" class="visually-hidden">Name</label>
+              <input
+                id="name"
+                class="underline-input"
+                type="text"
+                placeholder="Name"
+              />
+            </div>
+
+            <div class="form-field underline-input">
+              <label for="email" class="visually-hidden">Email</label>
+              <input id="email" type="email" placeholder="Email" />
+            </div>
+
+            <div class="form-field form-field--full underline-input">
+              <label for="message" class="visually-hidden">Message</label>
+              <textarea id="message" placeholder="Message" />
+            </div>
+
+            <div
+              class="form-field form-field--full section-contact__form-footer"
+            >
+              <base-button type="submit"> Submit </base-button>
+            </div>
+          </form>
         </div>
       </drop-card>
     </div>
@@ -72,14 +104,15 @@ export default {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: $SPACING_4XL;
   }
 
   &__social-link {
     background-color: $THEME_ACCENT4;
     border-radius: 50%;
     display: block;
-    margin: 0 $SPACING_M;
+    margin: 0 $SPACING_M $SPACING_S;
     height: 48px;
     width: 48px;
     padding: $SPACING_S;
@@ -101,10 +134,32 @@ export default {
     }
   }
 
+  &__form {
+    display: grid;
+    grid-gap: $SPACING_M;
+    margin-bottom: $SPACING_XS;
+
+    .form-field--full {
+      grid-column: 1/2;
+    }
+  }
+
+  &__form-footer {
+    justify-self: center;
+  }
+
   @include mq($from: medium) {
     &__card {
       margin: auto;
       width: 66.66%;
+    }
+
+    &__form {
+      grid-template-columns: 1fr 1fr;
+
+      .form-field--full {
+        grid-column: 1/3;
+      }
     }
   }
 }

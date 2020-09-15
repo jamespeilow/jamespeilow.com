@@ -82,19 +82,22 @@ input[type='url'],
 input[type='number'],
 textarea,
 select {
-  background-color: $COLOR_BACKGROUND_WHITE;
-  border: 1px solid $COLOR_BORDER_DARK;
+  background-color: $COLOR_BACKGROUND_LIGHT;
+  border: 0;
   color: $COLOR_TEXT_DARK;
   display: block;
+  font-family: $FONT_DISPLAY;
   font-size: $MS0;
+  font-weight: $WEIGHT_BOOK;
   height: 100%;
   line-height: $LINE_HEIGHT_M;
   min-height: 48px;
-  padding: $SPACING_S $SPACING_M 0.9rem;
+  padding: $SPACING_S $SPACING_M;
   width: 100%;
 
   &::placeholder {
-    color: $COLOR_TEXT_LIGHT;
+    color: $THEME_SHADE0;
+    opacity: 0.8;
   }
 
   &[disabled] {
@@ -265,7 +268,8 @@ input[type='radio'] {
       height: 12px;
       left: 0.24rem;
       position: absolute;
-      top: 6px;
+      top: 50%;
+      transform: translateY(-50%);
       visibility: hidden;
       width: 12px;
     }
@@ -291,5 +295,40 @@ input[type='radio'] {
         margin-bottom: $SPACING_XL;
       }
     }
+  }
+}
+
+.underline-input {
+  --underline-color: var(--theme-accent6);
+  $parent: &;
+  position: relative;
+
+  &::after {
+    background-color: var(--underline-color);
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    width: 20%;
+    height: 4px;
+    transition: all 0.4s ease;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+  }
+
+  &:focus-within {
+    &::after {
+      width: 70%;
+    }
+  }
+
+  &:nth-child(3n) {
+    --underline-color: var(--theme-accent2);
+  }
+
+  &:nth-child(3n-1) {
+    --underline-color: var(--theme-accent4);
   }
 }
