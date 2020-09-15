@@ -36,7 +36,7 @@ export default {
       type: String,
       default: 'm',
     },
-    type: {
+    variant: {
       type: String,
       default: 'primary',
     },
@@ -51,8 +51,8 @@ export default {
      */
     classes() {
       const props = {
-        'button--primary': this.type === 'primary',
-        'button--secondary': this.type === 'secondary',
+        'button--primary': this.variant === 'primary',
+        'button--secondary': this.variant === 'secondary',
 
         'button--block': this.block,
         'button--disabled': this.disabled,

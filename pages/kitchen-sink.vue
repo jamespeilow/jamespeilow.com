@@ -399,8 +399,8 @@ pre {
           <base-button>Base Button</base-button>
           <base-button :block="true">Block Button</base-button>
           <base-button :disabled="true">Disabled Button</base-button>
-          <base-button url="/" type="secondary">Home</base-button>
-          <base-button url="/" type="secondary" :outlined="true">
+          <base-button url="/" variant="secondary">Home</base-button>
+          <base-button url="/" variant="secondary" :outlined="true">
             Outline
           </base-button>
           <button type="button" name="button" class="button">Button</button>
