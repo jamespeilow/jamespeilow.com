@@ -73,6 +73,7 @@ option {
   color: $COLOR_TEXT_WHITE;
 }
 
+input:not([type]),
 input[type='text'],
 input[type='email'],
 input[type='password'],
@@ -140,6 +141,7 @@ input[type='radio'] {
 
 .checkbox {
   $checkbox: &;
+
   align-items: center;
   display: flex;
   position: relative;
@@ -213,6 +215,7 @@ input[type='radio'] {
 
 .radio {
   $checkbox: &;
+
   align-items: center;
   display: flex;
   position: relative;
@@ -301,13 +304,14 @@ input[type='radio'] {
 .underline-input {
   --underline-color: var(--theme-accent6);
   $parent: &;
+
   position: relative;
 
   &::after {
     background-color: var(--underline-color);
     content: '';
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
     width: 20%;
     height: 4px;
     transition: all 0.4s ease;
