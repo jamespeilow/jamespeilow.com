@@ -43,6 +43,8 @@
             accept-charset="utf-8"
             data-netlify="true"
           >
+            <input type="hidden" name="form-name" value="homepage-contact" />
+
             <div class="form-field underline-input">
               <label for="name" class="visually-hidden">Name</label>
               <input
