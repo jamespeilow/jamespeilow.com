@@ -1,13 +1,15 @@
 <template>
   <div class="container">
+    <h2
+      class="section-contact__title h1 feature-bar feature-bar--right-full"
+      style="--bar-accent: var(--theme-accent3)"
+    >
+      work
+    </h2>
+
     <div class="main-content">
-      <div v-for="post in posts" :key="post.slug">
-        <drop-card :accent="post.accent">
-          <base-link :url="`work/${post.slug}`">
-            <h3>{{ post.title }}</h3>
-            <span class="caption">{{ post.date }}</span>
-          </base-link>
-        </drop-card>
+      <div v-for="(post, index) in posts" :key="post.slug">
+        <portfolio-card :post="post" :image-right="index % 2" />
       </div>
     </div>
   </div>
