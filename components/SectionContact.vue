@@ -25,11 +25,13 @@
                 :new-window="true"
               >
                 <div class="section-contact__social-icon">
+                  <!-- eslint-disable vue/no-v-html -->
                   <div
                     v-html="
                       require(`~/assets/icons/${item.title.toLowerCase()}.svg?raw`)
                     "
                   />
+                  <!-- eslint-enable vue/no-v-html -->
                   <span class="visually-hidden">{{ item.title }}</span>
                 </div>
               </base-link>
