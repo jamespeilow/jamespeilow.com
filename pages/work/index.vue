@@ -9,7 +9,7 @@
 
     <div class="main-content">
       <div v-for="(post, index) in posts" :key="post.slug">
-        <portfolio-card :post="post" :image-right="index % 2" />
+        <portfolio-card :post="post" :image-right="Boolean(index % 2)" />
       </div>
     </div>
   </div>
