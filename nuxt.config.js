@@ -69,6 +69,13 @@ export default {
 
   hooks: {
     'content:file:beforeInsert': async (document, database) => {
+      // Get reading time
+      if (document.extension === '.md') {
+        const readingTime = require('reading-time')(document.text)
+        document.readingTime = readingTime
+      }
+
+      // Parse json bodys as markdown
       if (document.extension === '.json' && document.body) {
         const data = await database.markdown.toJSON(document.body)
 

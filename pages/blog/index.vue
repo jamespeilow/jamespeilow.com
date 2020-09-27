@@ -15,7 +15,9 @@
             :url="post.path"
           >
             <div class="blog-item__wrapper">
-              <span class="blog-item__read-time label">3 Minute Read</span>
+              <span v-if="post.readingTime" class="blog-item__read-time label">
+                {{ post.readingTime.text }}
+              </span>
               <h3 class="blog-item__title">{{ post.title }}</h3>
             </div>
           </base-link>
