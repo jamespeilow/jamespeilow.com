@@ -1,11 +1,23 @@
 <template>
-  <div class="container">
+  <div class="blog-landing container">
+    <h2
+      class="blog-landing__title h1 feature-bar feature-bar--left-full"
+      style="--bar-accent: var(--theme-accent6)"
+    >
+      blog
+    </h2>
+
     <div class="main-content">
-      <div v-for="post in posts" :key="post.slug">
-        <drop-card :accent="post.accent">
-          <base-link :url="post.path">
-            <h3>{{ post.title }}</h3>
-            <span class="caption">{{ post.date }}</span>
+      <div class="blog-landing__grid">
+        <drop-card v-for="post in posts" :key="post.slug" :accent="post.accent">
+          <base-link
+            class="blog-landing__item blog-item ratio-1-1"
+            :url="post.path"
+          >
+            <div class="blog-item__wrapper">
+              <span class="blog-item__read-time label">3 Minute Read</span>
+              <h3 class="blog-item__title">{{ post.title }}</h3>
+            </div>
           </base-link>
         </drop-card>
       </div>
@@ -25,12 +37,72 @@ export default {
         error({ statusCode: 404, message: 'Content not found' })
       })
     return {
-      posts,
+      posts: [...posts, ...posts, ...posts, ...posts],
     }
   },
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
+.blog-landing {
+  &__title {
+    margin-bottom: $LAYOUT_S;
+  }
+
+  &__grid {
+    display: grid;
+    gap: $SPACING_3XL;
+    width: 100%;
+  }
+
+  .drop-card {
+    margin: 0;
+  }
+
+  &__item,
+  &__item:visited {
+    display: flex;
+    color: $COLOR_TEXT_DARK;
+    text-decoration: none;
+  }
+
+  .blog-item__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $SPACING_3XL $SPACING_XL;
+  }
+
+  .blog-item__title {
+    margin-top: auto;
+  }
+
+  @include mq($from: small) {
+    &__grid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+  }
+
+  @include mq($from: medium) {
+    &__grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+    .drop-card {
+      margin-left: $SPACING_M;
+    }
+  }
+
+  @include mq($from: wide) {
+    &__grid {
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    }
+
+    .blog-item__wrapper {
+      padding: $SPACING_3XL $SPACING_XL $LAYOUT_S;
+    }
+  }
+}
+
 .main-content {
   align-items: center;
   display: flex;

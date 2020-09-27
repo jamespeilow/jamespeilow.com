@@ -1,0 +1,16 @@
+.ratio-1-1 {
+  &::before {
+    content: '';
+    float: left;
+    height: 0;
+    margin-left: -1px;
+    width: 1px;
+    padding-top: 100%;
+  }
+
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}

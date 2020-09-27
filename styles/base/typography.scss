@@ -178,6 +178,7 @@ p,
 
 .button-label {
   @include button-reset;
+
   font-family: $FONT_BODY;
   font-size: $MS-1;
   font-weight: $WEIGHT_SEMIBOLD;
@@ -218,9 +219,9 @@ label {
 }
 
 .label {
-  font-family: $FONT_BODY;
+  font-family: $FONT_DISPLAY;
   font-size: $MS-2;
-  font-weight: $WEIGHT_SEMIBOLD;
+  font-weight: $WEIGHT_BOOK;
   letter-spacing: $LETTER_SPACING_M;
   line-height: $LINE_HEIGHT_M;
   text-transform: uppercase;
