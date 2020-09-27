@@ -7,22 +7,24 @@
     </div>
 
     <div class="portfolio-card__content" :class="{ 'image-right': imageRight }">
-      <h3 class="portfolio-card__title">
-        {{ post.title }}
-      </h3>
+      <div class="portfolio-card__header-content">
+        <h3 class="portfolio-card__title">
+          {{ post.title }}
+        </h3>
+
+        <base-link
+          v-if="post.project_url"
+          class="portfolio-card__external-link"
+          :url="post.project_url"
+        >
+          View Project ->
+        </base-link>
+      </div>
 
       <p class="portfolio-card__excerpt">
         {{ post.description }}
       </p>
 
-      <base-button
-        v-if="post.project_url"
-        :url="post.project_url"
-        variant="secondary"
-        target="_blank"
-      >
-        View Project
-      </base-button>
       <base-button :url="`work/${post.slug}`">Find out more</base-button>
     </div>
 
@@ -65,6 +67,9 @@ export default {
 
   &__title {
     display: inline-block;
+  }
+
+  &__header-content {
     margin-bottom: $SPACING_S;
 
     &::after {
@@ -75,6 +80,10 @@ export default {
       margin-top: $SPACING_XS;
       width: 100%;
     }
+  }
+
+  &__external-link {
+    display: block;
   }
 
   &__excerpt {

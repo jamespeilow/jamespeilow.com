@@ -1,14 +1,33 @@
 <template>
   <div class="container">
-    <div class="main-content">
-      <drop-card :accent="post.accent">
-        <h3>{{ post.title }}</h3>
-        <img :src="post.cover_image" />
-        <base-button v-if="post.project_url" :url="post.project_url">
-          View Project
-        </base-button>
-        <nuxt-content :document="post" />
-      </drop-card>
+    <div class="main-content work-post">
+      <div class="work-post__header">
+        <drop-card class="work-post__image-wrapper">
+          <img class="work-post__image" :src="post.cover_image" />
+        </drop-card>
+        <div class="work-post__title-content">
+          <h3 class="work-post__title">{{ post.title }}</h3>
+          <base-link
+            v-if="post.project_url"
+            class="work-post__external-link"
+            :url="post.project_url"
+          >
+            View Project ->
+          </base-link>
+          <base-link
+            v-if="post.colde_url"
+            class="work-post__external-link"
+            :url="post.code_url"
+          >
+            View Code ->
+          </base-link>
+        </div>
+      </div>
+      <nuxt-content class="work-post__content" :document="post" />
+
+      <base-link class="back-link" url="/work">
+        {{ arrow }} Back to all work
+      </base-link>
     </div>
   </div>
 </template>
@@ -29,13 +48,57 @@ export default {
       post,
     }
   },
+  data() {
+    return {
+      arrow: '<-',
+    }
+  },
 }
 </script>
 <style lang="scss" scoped>
 .main-content {
-  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 860px;
+  margin: 0 auto $SPACING_3XL;
+  padding: 0 $SPACING_M;
+
+  @include mq($from: medium) {
+    padding: 0 $SPACING_3XL;
+    width: 66.66%;
+  }
+}
+
+.work-post {
+  &__header {
+    margin-bottom: $SPACING_XL;
+    padding-bottom: $SPACING_L;
+    border-bottom: 4px solid var(--theme-accent3);
+  }
+
+  &__image {
+    margin-bottom: $SPACING_M;
+  }
+
+  &__image-wrapper {
+    margin: 0 0 $SPACING_3XL;
+  }
+
+  @include mq($from: medium) {
+    &__header {
+      padding-bottom: $SPACING_XL;
+    }
+
+    &__title-content {
+      align-items: flex-end;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__external-link {
+      flex-shrink: 0;
+    }
+  }
 }
 </style>
