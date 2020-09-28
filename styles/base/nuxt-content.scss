@@ -1,0 +1,65 @@
+.nuxt-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
+    margin-bottom: $SPACING_S;
+  }
+
+  img {
+    display: block;
+  }
+
+  .drop-card {
+    align-self: center;
+    display: inline-block;
+    margin: $SPACING_3XL 0;
+  }
+
+  &-highlight {
+    margin-bottom: $SPACING_M;
+    margin-left: -#{$SPACING_M};
+    margin-right: -#{$SPACING_M};
+    width: calc(100% + #{$SPACING_M * 2});
+
+    .filename {
+      background-color: $THEME_ACCENT2;
+      border-radius: $SPACING_XS $SPACING_XS 0 0;
+      color: $THEME_SHADE0;
+      display: block;
+      padding: 0 $SPACING_M $SPACING_2XS;
+      position: relative;
+      top: $SPACING_M;
+      width: 100%;
+    }
+  }
+
+  &-container {
+    width: 100%;
+  }
+
+  @include mq($from: medium) {
+    &-highlight {
+      margin-bottom: $SPACING_3XL;
+      margin-left: -#{$SPACING_3XL};
+      margin-right: -#{$SPACING_3XL};
+      width: calc(100% + #{$SPACING_3XL * 2});
+
+      .filename {
+        padding: 0 $SPACING_3XL $SPACING_2XS;
+      }
+    }
+  }
+}

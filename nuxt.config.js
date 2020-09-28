@@ -65,6 +65,11 @@ export default {
 
   content: {
     liveEdit: false,
+    markdown: {
+      prism: {
+        theme: '@/styles/prism-styles.css',
+      },
+    },
   },
 
   hooks: {

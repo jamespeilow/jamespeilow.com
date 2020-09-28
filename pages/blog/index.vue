@@ -39,7 +39,7 @@ export default {
         error({ statusCode: 404, message: 'Content not found' })
       })
     return {
-      posts: [...posts, ...posts, ...posts, ...posts],
+      posts,
     }
   },
 }

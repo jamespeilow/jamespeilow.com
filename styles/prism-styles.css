@@ -1,0 +1,140 @@
+/**
+ * Dracula Theme originally by Zeno Rocha [@zenorocha]
+ * https://draculatheme.com/
+ *
+ * Ported for PrismJS by Albert Vallverdu [@byverdu]
+ */
+
+code[class*='language-'],
+pre[class*='language-'] {
+  color: #fff;
+  background: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  font-size: 13.3px;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  padding: 1.5rem 1rem;
+  margin: 0;
+  overflow: auto;
+  border-radius: 0.5rem;
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: #3d4a5c;
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  padding: 0.1em;
+  border-radius: 0.5rem;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #e7e8e6;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.token.punctuation {
+  color: #e7e8e6;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f69;
+}
+
+.token.boolean,
+.token.number {
+  color: #4ef9c6;
+}
+
+.token.selector,
+.token.attr-name,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #73deff;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.string {
+  color: #a6df8b;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #f69;
+}
+
+.token.function,
+.token.class-name,
+.token.regex,
+.token.important {
+  color: #f3de8a;
+}
+
+.token.keyword {
+  color: #73deff;
+}
+
+.token.keyword.module {
+  color: #f69;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+@media screen and (min-width: 768px) {
+  code[class*='language-'],
+  pre[class*='language-'] {
+    font-size: 16px;
+  }
+
+  /* Code blocks */
+  pre[class*='language-'] {
+    padding: 2rem;
+  }
+}
