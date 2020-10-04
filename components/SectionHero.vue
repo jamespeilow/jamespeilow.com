@@ -31,7 +31,7 @@ export default {
 <style lang="scss">
 .section-hero {
   display: flex;
-  min-height: 350px;
+  min-height: 450px;
   overflow: hidden;
   position: relative;
 
@@ -78,7 +78,7 @@ export default {
 
   @include mq($from: medium) {
     margin-bottom: $LAYOUT_M;
-    min-height: 500px;
+    min-height: 750px;
 
     &__bg-text {
       transform: translateY(20vw);

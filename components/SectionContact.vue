@@ -115,7 +115,6 @@ export default {
   }
 
   &__social-link {
-    background-color: $THEME_ACCENT4;
     border-radius: 50%;
     display: block;
     margin: 0 $SPACING_M $SPACING_S;
@@ -132,7 +131,7 @@ export default {
     }
 
     &:hover {
-      background-color: $THEME_ACCENT5;
+      background-color: $THEME_ACCENT2;
 
       .icon {
         transform: scale(1.1);

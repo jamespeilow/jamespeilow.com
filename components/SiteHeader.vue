@@ -1,5 +1,5 @@
 <template>
-  <header class="site-header">
+  <header class="site-header" :style="headerStyle">
     <div class="container site-header__container">
       <site-logo class="site-header__logo" />
 
@@ -40,6 +40,14 @@ export default {
     }
   },
 
+  computed: {
+    headerStyle() {
+      const position =
+        this.$nuxt.$route.fullPath === '/' ? 'absolute' : 'static'
+      return { position }
+    },
+  },
+
   methods: {
     itemStyles(item) {
       if (typeof item.accent === 'undefined') return
@@ -58,8 +66,12 @@ export default {
 
 <style lang="scss">
 .site-header {
-  padding: $SPACING_M 0;
+  left: 0;
   margin-bottom: $SPACING_XL;
+  padding: $SPACING_M 0;
+  top: 0;
+  width: 100%;
+  z-index: $LAYER_STICKY;
 
   &__container {
     align-items: center;
@@ -68,14 +80,14 @@ export default {
   }
 
   &__nav-list {
-    display: none;
+    display: flex;
     list-style: none;
   }
 
   &__nav-item {
     --accent: var(--theme-accent3);
 
-    margin-left: $SPACING_XS;
+    margin-left: $SPACING_M;
     position: relative;
 
     &::after {
@@ -98,12 +110,8 @@ export default {
   }
 
   @include mq($from: medium) {
-    &__nav-list {
-      display: flex;
-    }
-  }
+    margin-bottom: $SPACING_5XL;
 
-  @include mq($from: medium) {
     &__nav-item {
       margin-left: $SPACING_4XL;
     }
