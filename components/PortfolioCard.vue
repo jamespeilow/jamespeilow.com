@@ -1,13 +1,13 @@
 <template>
   <div class="portfolio-card">
     <div v-if="!imageRight" class="portfolio-card__image">
-      <drop-card>
+      <drop-card :accent="post.accent">
         <img :src="post.cover_image" />
       </drop-card>
     </div>
 
     <div class="portfolio-card__content" :class="{ 'image-right': imageRight }">
-      <div class="portfolio-card__header-content">
+      <div class="portfolio-card__header-content" :style="cssProps">
         <h3 class="portfolio-card__title">
           {{ post.title }}
         </h3>
@@ -29,7 +29,7 @@
     </div>
 
     <div v-if="imageRight" class="portfolio-card__image">
-      <drop-card>
+      <drop-card :accent="post.accent">
         <img :src="post.cover_image" />
       </drop-card>
     </div>
@@ -50,6 +50,17 @@ export default {
       default: false,
     },
   },
+
+  computed: {
+    cssProps() {
+      const accentVar = this.post.accent
+        ? `var(--theme-accent${this.post.accent})`
+        : ''
+      return {
+        '--underline-accent': accentVar,
+      }
+    },
+  },
 }
 </script>
 
@@ -63,6 +74,10 @@ export default {
     .drop-card {
       margin: 0 $SPACING_XS 0 0;
     }
+
+    img {
+      display: block;
+    }
   }
 
   &__title {
@@ -70,10 +85,12 @@ export default {
   }
 
   &__header-content {
+    --underline-accent: var(--theme-accent2);
+
     margin-bottom: $SPACING_S;
 
     &::after {
-      background-color: $THEME_ACCENT2;
+      background-color: var(--underline-accent);
       content: '';
       display: block;
       height: 4px;

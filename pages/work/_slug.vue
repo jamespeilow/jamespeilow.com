@@ -2,7 +2,7 @@
   <div class="container">
     <div class="main-content work-post">
       <div class="work-post__header">
-        <drop-card class="work-post__image-wrapper">
+        <drop-card class="work-post__image-wrapper" :accent="post.accent">
           <img class="work-post__image" :src="post.cover_image" />
         </drop-card>
         <div class="work-post__title-content">
@@ -15,7 +15,7 @@
             View Project ->
           </base-link>
           <base-link
-            v-if="post.colde_url"
+            v-if="post.code_url"
             class="work-post__external-link"
             :url="post.code_url"
           >
@@ -66,6 +66,11 @@ export default {
 
   @include mq($from: medium) {
     padding: 0 $SPACING_3XL;
+    width: 75%;
+  }
+
+  @include mq($from: large) {
+    padding: 0 $SPACING_3XL;
     width: 66.66%;
   }
 }
@@ -74,11 +79,11 @@ export default {
   &__header {
     margin-bottom: $SPACING_XL;
     padding-bottom: $SPACING_L;
-    border-bottom: 4px solid var(--theme-accent3);
+    border-bottom: 4px solid var(--theme-accent6);
   }
 
   &__image {
-    margin-bottom: $SPACING_M;
+    display: block;
   }
 
   &__image-wrapper {

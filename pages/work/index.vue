@@ -2,7 +2,7 @@
   <div class="container">
     <h2
       class="section-contact__title h1 feature-bar feature-bar--right-full"
-      style="--bar-accent: var(--theme-accent3)"
+      style="--bar-accent: var(--theme-accent0)"
     >
       work
     </h2>
