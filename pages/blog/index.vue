@@ -2,7 +2,7 @@
   <div class="blog-landing container">
     <h2
       class="blog-landing__title h1 feature-bar feature-bar--left-full"
-      style="--bar-accent: var(--theme-accent6)"
+      style="--bar-accent: var(--theme-accent5)"
     >
       blog
     </h2>

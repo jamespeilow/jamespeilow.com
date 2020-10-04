@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="post__grid">
-      <grid-circles />
+      <grid-circles :rotate="rotation" />
       <div class="main-content post">
         <h2 class="post__title h1">
           {{ post.title }}
@@ -44,6 +44,9 @@ export default {
     formattedDate() {
       const date = new Date(this.post.date)
       return format(date, 'do MMM Y')
+    },
+    rotation() {
+      return Math.floor(Math.random() * 4) * 90
     },
   },
 }

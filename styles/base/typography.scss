@@ -267,17 +267,17 @@ blockquote {
   }
 }
 
-ol,
-.ol,
-ul,
-.ul {
-  font-size: $MS-1;
-  line-height: $LINE_HEIGHT_M;
+// ol,
+// .ol,
+// ul,
+// .ul {
+//   font-size: $MS-1;
+//   line-height: $LINE_HEIGHT_M;
 
-  @include mq($from: large) {
-    font-size: $MS0;
-  }
-}
+//   @include mq($from: large) {
+//     font-size: $MS0;
+//   }
+// }
 
 code,
 kbd,
@@ -345,5 +345,12 @@ samp {
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  .ol,
+  ol,
+  .ul,
+  ul {
+    margin-bottom: $SPACING_L;
   }
 }
