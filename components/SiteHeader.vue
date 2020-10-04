@@ -39,7 +39,7 @@ export default {
         },
         {
           label: 'uses',
-          url: '/kitchen-sink',
+          url: '/uses',
         },
       ],
     }
