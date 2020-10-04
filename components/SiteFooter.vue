@@ -32,24 +32,12 @@ export default {
     return {
       links: [
         {
-          label: 'Portfolio',
-          url: '/portfolio',
-        },
-        {
-          label: 'Blog',
-          url: '/blog',
-        },
-        {
-          label: 'about',
-          url: '/about',
+          label: 'Work',
+          url: '/work',
         },
         {
           label: 'uses',
           url: '/uses',
-        },
-        {
-          label: 'contact',
-          url: '/contact',
         },
       ],
     }

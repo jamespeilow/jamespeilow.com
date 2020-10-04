@@ -33,11 +33,6 @@ export default {
           accent: 'theme-accent0',
         },
         {
-          label: 'blog',
-          url: '/blog',
-          accent: 'theme-accent4',
-        },
-        {
           label: 'uses',
           url: '/uses',
         },
