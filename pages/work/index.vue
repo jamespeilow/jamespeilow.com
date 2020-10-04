@@ -11,6 +11,8 @@
       <div v-for="(post, index) in posts" :key="post.slug">
         <portfolio-card :post="post" :image-right="Boolean(index % 2)" />
       </div>
+
+      <p>Other work available on request.</p>
     </div>
   </div>
 </template>
@@ -20,6 +22,7 @@ export default {
   async asyncData({ $content, params, error }) {
     // const slug = 'blog/setting-up-netlify-cms-with-nuxt-content'
     const posts = await $content('portfolio')
+      .sortBy('date', 'desc')
       .fetch()
       .catch((err) => {
         // eslint-disable-next-line no-console

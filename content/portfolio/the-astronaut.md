@@ -1,6 +1,6 @@
 ---
 title: The Astronaut Blog
-date: 2020-09-11T18:02:17.500Z
+date: 2020-10-04T12:02:17.500Z
 description: A Gridsome based personal blog converted from an existing Wordpress site to the JAMstack.
 cover_image: /images/www.the-astronaut.com.jpg
 project_url: https://the-astronaut.com/
