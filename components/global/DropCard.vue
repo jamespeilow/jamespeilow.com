@@ -11,8 +11,8 @@
 export default {
   props: {
     accent: {
-      type: String,
-      default: '5',
+      type: Number,
+      default: 5,
     },
     gridCircles: {
       type: Boolean,
@@ -26,7 +26,7 @@ export default {
 
   computed: {
     cleanValue() {
-      const defaultValue = '5'
+      const defaultValue = 5
       const numberValue = Number(this.accent)
       if (
         numberValue.toString === 'NaN' ||

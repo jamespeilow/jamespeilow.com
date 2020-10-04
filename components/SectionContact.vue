@@ -8,7 +8,7 @@
         {{ sectionData.title }}
       </h2>
 
-      <drop-card class="section-contact__card" accent="7" :grid-circles="true">
+      <drop-card class="section-contact__card" :accent="7" :grid-circles="true">
         <div class="section-contact__wrapper">
           <ul
             v-if="sectionData.social.length > 0"

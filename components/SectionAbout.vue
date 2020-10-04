@@ -10,7 +10,7 @@
         </div>
         <div class="section-about__image-wrapper">
           <drop-card
-            accent="7"
+            :accent="7"
             :grid-circles="true"
             :grid-circles-rotation="180"
           >
