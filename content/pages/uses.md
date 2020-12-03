@@ -35,11 +35,12 @@ Inspired by Wes Bos’s /uses page, and the [uses.tech](https://uses.tech/) site
 
 ## Desk Setup
 
-- 2017 MacBook Pro 13in
+- 2020 MacBook Pro 13in
 - Dual Monitors (Benq GL2580 and AOC 2581W)
 - [Duronic gas-powered monitor arm](https://www.amazon.co.uk/gp/product/B07MHM3BVG/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1)
 - Ikea Linnmon + Alex Desk
 - Google Nest Mini
+- Nintendo Switch
 
 ## Phone Setup
 
