@@ -44,11 +44,9 @@ Inspired by Wes Bos’s /uses page, and the [uses.tech](https://uses.tech/) site
 
 ## Phone Setup
 
-[image]
-
 I keep a pretty minimal setup on my iPhone11 with just have one home screen set up (thanks iOS14!), and I don't have tons of apps on my phone. Some of my favourite apps are:
 
-- [Day One](https://dayoneapp.com/) journalling
+- [Day One](https://dayoneapp.com/) journaling
 - [Instagram](https://www.instagram.com/the_astronaut/?hl=en)
 - Pocket
 - Notion

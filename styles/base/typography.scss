@@ -353,4 +353,11 @@ samp {
   ul {
     margin-bottom: $SPACING_L;
   }
+
+  li .ol,
+  li ol,
+  li .ul,
+  li ul {
+    margin-bottom: $SPACING_L / 2;
+  }
 }
