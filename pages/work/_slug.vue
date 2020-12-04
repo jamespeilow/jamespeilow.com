@@ -57,6 +57,23 @@ export default {
       arrow: '<-',
     }
   },
+  head() {
+    return {
+      title: `${this.post.title} - JamesPeilow.com`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.description,
+        },
+        {
+          hid: 'og:image',
+          name: 'og:image',
+          content: this.post.cover_image,
+        },
+      ],
+    }
+  },
 }
 </script>
 <style lang="scss" scoped>

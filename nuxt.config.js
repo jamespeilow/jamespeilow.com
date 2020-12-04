@@ -14,14 +14,21 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'James Peilow',
     meta: [
       { charset: 'utf-8' },
+      { lang: 'en' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content:
+          'The personal website of James Peilow - London-based front-end developer currently working building great Shopify sites.',
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: '/images/site-image.png',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
