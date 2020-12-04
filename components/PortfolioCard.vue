@@ -5,7 +5,7 @@
   >
     <div v-if="!imageRight" class="portfolio-card__image">
       <drop-card :accent="post.accent">
-        <img :src="post.cover_image" />
+        <nuxt-image :placeholder="true" :src="post.cover_image" />
       </drop-card>
     </div>
 
@@ -33,7 +33,7 @@
 
     <div v-if="imageRight" class="portfolio-card__image">
       <drop-card :accent="post.accent">
-        <img :src="post.cover_image" />
+        <nuxt-image :placeholder="true" :src="post.cover_image" />
       </drop-card>
     </div>
   </div>

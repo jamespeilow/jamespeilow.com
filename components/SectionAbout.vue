@@ -14,10 +14,11 @@
             :grid-circles="true"
             :grid-circles-rotation="180"
           >
-            <img
+            <nuxt-image
               class="section-about__image"
-              :src="sectionData.image"
               alt="Profile Image"
+              :placeholder="true"
+              :src="sectionData.image"
             />
           </drop-card>
         </div>
@@ -66,6 +67,11 @@ export default {
       position: absolute;
       top: -$grid-circle-offset;
       width: $grid-circle-size;
+      z-index: $LAYER_RAISED;
+    }
+
+    .drop-card {
+      width: 100%;
     }
   }
 

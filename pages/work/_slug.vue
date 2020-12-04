@@ -3,7 +3,11 @@
     <div class="main-content work-post">
       <div class="work-post__header">
         <drop-card class="work-post__image-wrapper" :accent="post.accent">
-          <img class="work-post__image" :src="post.cover_image" />
+          <nuxt-image
+            class="work-post__image"
+            :placeholder="true"
+            :src="post.cover_image"
+          />
         </drop-card>
         <div class="work-post__title-content">
           <h3 class="work-post__title">{{ post.title }}</h3>

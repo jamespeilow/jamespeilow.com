@@ -8,7 +8,11 @@
     </h2>
 
     <div class="main-content">
-      <div v-for="(post, index) in posts" :key="post.slug">
+      <div
+        v-for="(post, index) in posts"
+        :key="post.slug"
+        class="card__container"
+      >
         <portfolio-card :post="post" :image-right="Boolean(index % 2)" />
       </div>
 
@@ -41,5 +45,9 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.card__container {
+  width: 100%;
 }
 </style>
