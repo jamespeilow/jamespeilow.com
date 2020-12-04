@@ -1,5 +1,8 @@
 <template>
-  <div class="portfolio-card">
+  <div
+    class="portfolio-card"
+    :class="{ 'portfolio-card--is-right': imageRight }"
+  >
     <div v-if="!imageRight" class="portfolio-card__image">
       <drop-card :accent="post.accent">
         <img :src="post.cover_image" />
@@ -66,6 +69,10 @@ export default {
 
 <style lang="scss">
 .portfolio-card {
+  $parent: &;
+
+  display: flex;
+  flex-direction: column;
   margin-bottom: $SPACING_5XL;
 
   &__image {
@@ -107,9 +114,17 @@ export default {
     margin-bottom: $SPACING_S;
   }
 
+  @include mq($until: medium) {
+    &#{&}--is-right {
+      #{$parent}__image {
+        order: -1;
+      }
+    }
+  }
+
   @include mq($from: medium) {
     align-items: flex-end;
-    display: flex;
+    flex-direction: row;
     margin-bottom: $LAYOUT_M;
 
     &__image {

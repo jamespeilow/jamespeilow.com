@@ -3,7 +3,7 @@ title: Minimal Quotes
 date: 2020-09-11T18:02:17.500Z
 description: A responsive site with minimalist aesthetic styling that displays a
   random quote about minimalism.
-cover_image: /images/jamespeilow.github.io_random-quote-generator_.png
+cover_image: /images/jamespeilow.github.io_random-quote-generator_.jpg
 project_url: https://jamespeilow.github.io/random-quote-generator/
 accent: 2
 ---
