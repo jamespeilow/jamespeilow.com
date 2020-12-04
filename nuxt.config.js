@@ -61,7 +61,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', '@nuxt/image'],
 
   content: {
     liveEdit: false,
