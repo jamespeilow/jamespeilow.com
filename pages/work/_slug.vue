@@ -69,7 +69,7 @@ export default {
         {
           hid: 'og:image',
           name: 'og:image',
-          content: this.post.cover_image,
+          content: `${process.env.baseUrl}${this.post.cover_image}`,
         },
       ],
     }

@@ -28,7 +28,9 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: '/images/site-image.png',
+        content: `${
+          process.env.BASE_URL || 'http://localhost:3000'
+        }/images/site-image.png`,
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -111,4 +113,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+  },
 }
