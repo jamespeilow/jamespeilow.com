@@ -1,6 +1,18 @@
 <template>
+  <nuxt-link
+    v-if="element === 'nuxt-link'"
+    class="button"
+    :class="classes"
+    :disabled="disabled"
+    :to="to"
+  >
+    <slot>Button Text</slot>
+    <span v-if="arrow" class="button__arrow"> -> </span>
+  </nuxt-link>
+
   <component
     :is="element"
+    v-else
     class="button"
     :class="classes"
     :disabled="disabled"
