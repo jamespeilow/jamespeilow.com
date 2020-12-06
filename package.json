@@ -25,7 +25,8 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "date-fns": "^2.16.1",
     "nuxt": "^2.14.0",
-    "reading-time": "^1.2.0"
+    "reading-time": "^1.2.0",
+    "vue-gtag": "^1.10.0"
   },
   "devDependencies": {
     "@nuxt/image": "^0.0.4",

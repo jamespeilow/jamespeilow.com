@@ -43,7 +43,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [{ src: '~/plugins/vue-gtag', mode: 'client' }],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -122,6 +122,7 @@ export default {
   },
   env: {
     baseUrl,
+    gtagID: process.env.GTAG_ID,
   },
 
   sitemap: {
