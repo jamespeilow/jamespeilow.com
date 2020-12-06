@@ -28,7 +28,7 @@
         {{ post.description }}
       </p>
 
-      <base-button :url="`work/${post.slug}`">Find out more</base-button>
+      <base-button :url="postUrl">Find out more</base-button>
     </div>
 
     <div v-if="imageRight" class="portfolio-card__image">
@@ -62,6 +62,9 @@ export default {
       return {
         '--underline-accent': accentVar,
       }
+    },
+    postUrl() {
+      return `/work/${this.post.slug}`
     },
   },
 }
