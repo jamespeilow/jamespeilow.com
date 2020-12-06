@@ -1,3 +1,5 @@
+const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -28,9 +30,7 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: `${
-          process.env.BASE_URL || 'http://localhost:3000'
-        }/images/site-image.png`,
+        content: `${baseUrl}/images/site-image.png`,
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -61,6 +61,7 @@ export default {
     '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/svg-module
     '@nuxtjs/svg',
+    '@/modules/generator',
   ],
 
   styleResources: {
@@ -70,7 +71,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxt/content', '@nuxt/image'],
+  modules: ['@nuxt/content', '@nuxt/image', '@nuxtjs/sitemap'],
 
   content: {
     liveEdit: false,
@@ -112,8 +113,18 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    extend(config, ctx) {
+      if (ctx.isDev) {
+        config.devtool = ctx.isClient ? 'source-map' : 'inline-source-map'
+      }
+    },
+  },
   env: {
-    baseUrl: process.env.BASE_URL || 'http://localhost:3000',
+    baseUrl,
+  },
+
+  sitemap: {
+    hostname: baseUrl,
   },
 }
