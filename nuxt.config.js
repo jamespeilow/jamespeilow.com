@@ -40,6 +40,10 @@ export default {
         name: 'theme-color',
         content: '#232931',
       },
+      {
+        name: 'msapplication-config',
+        content: '/favicons/browserconfig.xml',
+      },
     ],
     link: [
       {
