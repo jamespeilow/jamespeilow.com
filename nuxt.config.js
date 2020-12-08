@@ -32,8 +32,43 @@ export default {
         name: 'og:image',
         content: `${baseUrl}/images/site-image.png`,
       },
+      {
+        name: 'msapplication-TileColor',
+        content: '#232931',
+      },
+      {
+        name: 'theme-color',
+        content: '#232931',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/favicons/apple-touch-icon.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicons/favicon-32x32.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicons/favicon-16x16.png',
+      },
+      {
+        rel: 'manifest',
+        href: '/favicons/site.webmanifest',
+      },
+      {
+        rel: 'mask-icon',
+        color: '#232931',
+        href: '/favicons/safari-pinned-tab.svg',
+      },
+    ],
   },
   /*
    ** Global CSS
