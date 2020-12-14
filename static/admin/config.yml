@@ -1,10 +1,15 @@
 backend:
   name: github
   repo: jamespeilow/jamespeilow.com
-  branch: test-content
+  branch: master
 
+publish_mode: editorial_workflow
 media_folder: static/images
 public_folder: /images
+
+display_url: https://jamespeilow.com
+logo_url: https://jamespeilow.com/favicons/safari-pinned-tab.svg
+
 
 collections:
   - name: 'blog'
@@ -13,6 +18,7 @@ collections:
     folder: 'content/blog'
     create: true
     slug: '{{slug}}'
+    preview_path: 'blog/{{slug}}'
     editor:
       preview: false
     fields:
@@ -37,6 +43,7 @@ collections:
     folder: 'content/portfolio'
     create: true
     slug: '{{slug}}'
+    preview_path: 'work/{{slug}}'
     editor:
       preview: false
     fields:
@@ -63,6 +70,57 @@ collections:
         }
   - name: 'pages'
     label: 'Pages'
+    format: 'frontmatter'
+    folder: 'content/pages'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - {
+          label: 'Accent',
+          name: 'accent',
+          widget: 'select',
+          options: [
+            {
+              label: "Accent 0",
+              value: 0,
+            },
+            {
+              label: "Accent 1",
+              value: 1,
+            },
+            {
+              label: "Accent 2",
+              value: 2,
+            },
+            {
+              label: "Accent 3",
+              value: 3,
+            },
+            {
+              label: "Accent 4",
+              value: 4,
+            },
+            {
+              label: "Accent 5",
+              value: 5,
+            },
+            {
+              label: "Accent 6",
+              value: 6,
+            },
+            {
+              label: "Accent 7",
+              value: 7,
+            },
+          ],
+          required: true,
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'static-pages'
+    label: 'Static Pages'
     files:
       - label: 'Homepage'
         name: 'homepage'
