@@ -94,6 +94,11 @@
 <script>
 import { debounce } from '@/scripts/utils/helpers'
 export default {
+  data() {
+    return {
+      windowWidth: null,
+    }
+  },
   mounted() {
     this.setCircleStyles()
     this.setResizeListener()
@@ -110,6 +115,7 @@ export default {
     },
 
     setCircleStyles() {
+      this.windowWidth = window.innerWidth
       if (!this.$refs.heroCircles) return
 
       const circles = Array.from(
@@ -125,6 +131,9 @@ export default {
     },
 
     handleResize() {
+      if (window.innerWidth === this.windowWidth) {
+        return
+      }
       this.setCircleStyles()
     },
   },
