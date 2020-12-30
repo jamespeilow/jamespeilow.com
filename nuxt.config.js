@@ -33,6 +33,11 @@ export default {
         content: `${baseUrl}/images/site-image.png`,
       },
       {
+        hid: 'og:logo',
+        name: 'og:logo',
+        content: '/favicons/android-chrome-512x512.png',
+      },
+      {
         name: 'msapplication-TileColor',
         content: '#232931',
       },
