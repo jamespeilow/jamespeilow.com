@@ -38,7 +38,7 @@
             </li>
           </ul>
 
-          <form
+          <!-- <form
             class="section-contact__form"
             name="homepage-contact"
             method="post"
@@ -73,7 +73,7 @@
             >
               <base-button type="submit"> Submit </base-button>
             </div>
-          </form>
+          </form> -->
         </div>
       </drop-card>
     </div>
@@ -110,7 +110,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 auto $SPACING_4XL;
+    margin: 0 auto;
     width: 75%;
   }
 
