@@ -5,7 +5,7 @@
   },
   "about": {
     "title": "about me",
-    "body": "Hi!👋  I'm James.\n\nI'm a London-based front-end developer currently working building great Shopify sites at WeMakeWebsites.\n\nI love working with Javascript and Vue, solving problems and constantly learning.\n\nWhen I'm not developing I'm drinking coffee or beer, stand-up paddleboarding, playing games on my Nintendo Switch (currently playing Mario + Rabbids: Kingdom Battle and Super Metroid) and getting out in the countryside.",
+    "body": "Hi!👋  I'm James.\n\nI'm a front-end developer currently working as a principal developer building great Shopify sites and working on internal tooling at WeMakeWebsites.\n\nI love working with Javascript, Vue, and React, solving problems and constantly learning.\n\nWhen I'm not developing I'm drinking coffee, stand-up paddleboarding, playing video games (I enjoy a good metroidvania) and getting out hiking the countryside.",
     "image": "/images/jamespeilow-headshot.jpg"
   },
   "contact": {
@@ -18,10 +18,6 @@
       {
         "title": "Codepen",
         "url": "https://codepen.io/jamespeilow"
-      },
-      {
-        "title": "Twitter",
-        "url": "https://twitter.com/TheAstronautJay"
       },
       {
         "title": "LinkedIn",

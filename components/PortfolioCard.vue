@@ -63,6 +63,10 @@ export default {
         '--underline-accent': accentVar,
       }
     },
+
+    /**
+     * Get the post URL.
+     */
     postUrl() {
       return `/work/${this.post.slug}`
     },

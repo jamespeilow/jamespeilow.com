@@ -114,6 +114,9 @@ export default {
       return (Math.random() * range + min).toFixed(1)
     },
 
+    /**
+     * Set the styles for the circles.
+     */
     setCircleStyles() {
       this.windowWidth = window.innerWidth
       if (!this.$refs.heroCircles) return
@@ -130,6 +133,9 @@ export default {
       })
     },
 
+    /**
+     * Handle the window resize event.
+     */
     handleResize() {
       if (window.innerWidth === this.windowWidth) {
         return
