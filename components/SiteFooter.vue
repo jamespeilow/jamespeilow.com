@@ -31,10 +31,10 @@ export default {
   data() {
     return {
       links: [
-        {
-          label: 'Work',
-          url: '/work',
-        },
+        // {
+        //   label: 'Work',
+        //   url: '/work',
+        // },
         {
           label: 'uses',
           url: '/uses',

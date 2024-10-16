@@ -27,15 +27,15 @@ export default {
   data() {
     return {
       navItems: [
-        {
-          label: 'work',
-          url: '/work',
-          accent: 'theme-accent0',
-        },
-        {
-          label: 'uses',
-          url: '/uses',
-        },
+        // {
+        //   label: 'work',
+        //   url: '/work',
+        //   accent: 'theme-accent0',
+        // },
+        // {
+        //   label: 'uses',
+        //   url: '/uses',
+        // },
       ],
     }
   },
